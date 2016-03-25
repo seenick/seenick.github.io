@@ -43,7 +43,7 @@ gulp.task('html', function() {
   }).on("error", notify.onError(function (error) {
     return "Error - html include: " + error.message;
   })))
-  .pipe(gulp.dest('./src/'))
+  .pipe(gulp.dest('./'))
   .pipe(browserSync.stream({}))
   .pipe(notify({ message: "html file: <%= file.relative %>"}));
 });
