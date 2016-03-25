@@ -64,7 +64,7 @@ gulp.task('js', function(){
     return "Error - js include: " + error.message;
   })))
   .pipe(rename({suffix: '.inc'}))
-  .pipe(gulp.dest('./src/js'))
+  .pipe(gulp.dest('./js'))
   .pipe(uglify().on("error", notify.onError(function (error) {
     return "Error - uglify: " + error.message;
   })))

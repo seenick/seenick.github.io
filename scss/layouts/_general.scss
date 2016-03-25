@@ -12,14 +12,16 @@
 			li:nth-child(1) {
 				display: block;
 				width: 200px !important;
-				&:before {
-					content: 'Project #1';
+				p {
+					display: block !important;
 					color: #000;
-					font-weight: bold;
 					text-transform: uppercase;
+					margin: 0;
+					white-space: nowrap;
+					height: 100%;
 					position: relative;
-					top: 4px;
-					left: 4px;
+					top: 3px;
+					left: 7px;
 				}
 			}
 		}
@@ -32,20 +34,23 @@
 			}
 			li:nth-child(2) {
 				display: block;
+				z-index: 999;
 			}
 		}
 		.nav-container {
 			li:nth-child(2) {
 				display: block;
 				width: 200px !important;
-				&:before {
-					content: 'Project #2';
+				p {
+					display: block !important;
 					color: #000;
-					font-weight: bold;
 					text-transform: uppercase;
+					margin: 0;
+					white-space: nowrap;
+					height: 100%;
 					position: relative;
-					top: 4px;
-					left: 4px;
+					top: 3px;
+					left: 7px;
 				}
 			}
 		}
@@ -58,20 +63,23 @@
 			}
 			li:nth-child(3) {
 				display: block;
+				z-index: 999;
 			}
 		}
 		.nav-container {
 			li:nth-child(3) {
 				display: block;
 				width: 200px !important;
-				&:before {
-					content: 'Project #3';
+				p {
+					display: block !important;
 					color: #000;
-					font-weight: bold;
 					text-transform: uppercase;
+					margin: 0;
+					white-space: nowrap;
+					height: 100%;
 					position: relative;
-					top: 4px;
-					left: 4px;
+					top: 3px;
+					left: 7px;
 				}
 			}
 		}
@@ -84,20 +92,23 @@
 			}
 			li:nth-child(4) {
 				display: block;
+				z-index: 999;
 			}
 		}
 		.nav-container {
 			li:nth-child(4) {
 				display: block;
 				width: 200px !important;
-				&:before {
-					content: 'Project #4';
+				p {
+					display: block !important;
 					color: #000;
-					font-weight: bold;
 					text-transform: uppercase;
+					margin: 0;
+					white-space: nowrap;
+					height: 100%;
 					position: relative;
-					top: 4px;
-					left: 4px;
+					top: 3px;
+					left: 7px;
 				}
 			}
 		}

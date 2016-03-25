@@ -435,7 +435,6 @@ $(document).ready(function() {
 });
 
 
-
 $(document).ready(function() {
 
 	backgroundImage($(".has-bg"), "center center / cover no-repeat", 2);
@@ -444,10 +443,8 @@ $(document).ready(function() {
 	
   placeHolders('form');
 
-  $('header .wrap').navChecker();
-
 // =============================================================================
-//	Prject Toggle
+//	Project Toggle
 // =============================================================================
 
 	$('.nav-container ul li:first-child').on("click", function(){
@@ -465,5 +462,22 @@ $(document).ready(function() {
 	$('.nav-container ul li:nth-child(4)').on("click", function(){
 	  $('body').toggleClass('four_is_visible').removeClass('one_is_visible').removeClass('two_is_visible').removeClass('three_is_visible');
 	});
+
+// =============================================================================
+//	Nav text grab
+// =============================================================================
+
+	var navText = $('.projects-container .collection ul li:first-child .collection-item-label a').text();
+    $('.nav-container ul li:first-child').append('<p>' + navText +'</p>');
+
+    var navText2 = $('.projects-container .collection ul li:nth-child(2) .collection-item-label a').text();
+    $('.nav-container ul li:nth-child(2)').append('<p>' + navText2 +'</p>');
+
+    var navText3 = $('.projects-container .collection ul li:nth-child(3) .collection-item-label a').text();
+    $('.nav-container ul li:nth-child(3)').append('<p>' + navText3 +'</p>');
+
+	var navText4 = $('.projects-container .collection ul li:nth-child(4) .collection-item-label a').text();
+    $('.nav-container ul li:nth-child(4)').append('<p>' + navText4 +'</p>');
+
 
 }); // end document ready

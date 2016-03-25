@@ -44,42 +44,48 @@ Homepage
 							border-radius: 0;
 							background: #fff;
 							transition: .5s width ease;
+							position: relative;
 							&:hover {
 								width: 200px;
 								transition: .5s width ease;
 								cursor: pointer;
-								&:before {
+								p {
+									display: block;
 									color: #000;
-									font-weight: bold;
 									text-transform: uppercase;
+									margin: 0;
+									white-space: nowrap;
+									height: 100%;
 									position: relative;
-									top: 4px;
-									left: 4px;
+									top: 3px;
+									left: 7px;
 								}
 							}
-							&:last-child {
-								margin-bottom: 0px;
+							p {
+								display: none;
 							}
-							&:nth-child(1) {
-								&:hover:before {
-									content: 'Project #1';
-								}
-							}
-							&:nth-child(2) {
-								&:hover:before {
-									content: 'Project #2';
-								}
-							}
-							&:nth-child(3) {
-								&:hover:before {
-									content: 'Project #3';
-								}
-							}
-							&:nth-child(4) {
-								&:hover:before {
-									content: 'Project #4';
-								}
-							}
+						}
+					}
+				}
+				.about-content {
+					position: absolute;
+					right: 0;
+					left: 0;
+					text-align: center;
+					top: 75%;
+					p {
+						color: #fff;
+						text-transform: uppercase;
+						font-weight: 700;
+						border: 5px solid #fff;
+						display: inline;
+						padding: 20px 30px;
+						transition: .5s all ease;
+						&:hover {
+							background: #fff;
+							color: #000;
+							transition: .5s all ease;
+							cursor: pointer;
 						}
 					}
 				}
@@ -104,8 +110,8 @@ Homepage
 								.collection-item-image.image {
 									height: 100%;
 									img {
-						display: none;
-					}
+										display: none;
+									}
 								}
 								.collection-item-label {
 									position: absolute;
@@ -139,6 +145,9 @@ Homepage
 								}
 							}
 						}
+					}
+					li:first-child {
+						z-index: 99;
 					}
 				}
 			}

@@ -227,31 +227,31 @@ nav.mobile ul ul ul li:hover > a { background: #999; color: #fff; }
 
 .one_is_visible .nav-container li:nth-child(1) { display: block; width: 200px !important; }
 
-.one_is_visible .nav-container li:nth-child(1):before { content: 'Project #1'; color: #000; font-weight: bold; text-transform: uppercase; position: relative; top: 4px; left: 4px; }
+.one_is_visible .nav-container li:nth-child(1) p { display: block !important; color: #000; text-transform: uppercase; margin: 0; white-space: nowrap; height: 100%; position: relative; top: 3px; left: 7px; }
 
 .two_is_visible .projects-container li:nth-child(n+1) { display: none; }
 
-.two_is_visible .projects-container li:nth-child(2) { display: block; }
+.two_is_visible .projects-container li:nth-child(2) { display: block; z-index: 999; }
 
 .two_is_visible .nav-container li:nth-child(2) { display: block; width: 200px !important; }
 
-.two_is_visible .nav-container li:nth-child(2):before { content: 'Project #2'; color: #000; font-weight: bold; text-transform: uppercase; position: relative; top: 4px; left: 4px; }
+.two_is_visible .nav-container li:nth-child(2) p { display: block !important; color: #000; text-transform: uppercase; margin: 0; white-space: nowrap; height: 100%; position: relative; top: 3px; left: 7px; }
 
 .three_is_visible .projects-container li:nth-child(n+1) { display: none; }
 
-.three_is_visible .projects-container li:nth-child(3) { display: block; }
+.three_is_visible .projects-container li:nth-child(3) { display: block; z-index: 999; }
 
 .three_is_visible .nav-container li:nth-child(3) { display: block; width: 200px !important; }
 
-.three_is_visible .nav-container li:nth-child(3):before { content: 'Project #3'; color: #000; font-weight: bold; text-transform: uppercase; position: relative; top: 4px; left: 4px; }
+.three_is_visible .nav-container li:nth-child(3) p { display: block !important; color: #000; text-transform: uppercase; margin: 0; white-space: nowrap; height: 100%; position: relative; top: 3px; left: 7px; }
 
 .four_is_visible .projects-container li:nth-child(n+1) { display: none; }
 
-.four_is_visible .projects-container li:nth-child(4) { display: block; }
+.four_is_visible .projects-container li:nth-child(4) { display: block; z-index: 999; }
 
 .four_is_visible .nav-container li:nth-child(4) { display: block; width: 200px !important; }
 
-.four_is_visible .nav-container li:nth-child(4):before { content: 'Project #4'; color: #000; font-weight: bold; text-transform: uppercase; position: relative; top: 4px; left: 4px; }
+.four_is_visible .nav-container li:nth-child(4) p { display: block !important; color: #000; text-transform: uppercase; margin: 0; white-space: nowrap; height: 100%; position: relative; top: 3px; left: 7px; }
 
 /*==Project transition==*/
 .homepage main .wrap .projects-container .collection ul li:first-child, .two_is_visible .wrap .projects-container .collection ul li:nth-child(2), .three_is_visible .wrap .projects-container .collection ul li:nth-child(3), .four_is_visible .wrap .projects-container .collection ul li:nth-child(4) { opacity: 1; -webkit-transition: 1s opacity ease; transition: 1s opacity ease; }
@@ -275,21 +275,19 @@ Homepage
 
 .homepage main .wrap .nav-container nav.sidenav ul { list-style-type: none; padding: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
 
-.homepage main .wrap .nav-container nav.sidenav ul li { -webkit-box-flex: 0; -webkit-flex: 0 1 auto; -ms-flex: 0 1 auto; flex: 0 1 auto; height: 30px; width: 100px; margin: 20px 0; border-radius: 0; background: #fff; -webkit-transition: .5s width ease; transition: .5s width ease; }
+.homepage main .wrap .nav-container nav.sidenav ul li { -webkit-box-flex: 0; -webkit-flex: 0 1 auto; -ms-flex: 0 1 auto; flex: 0 1 auto; height: 30px; width: 100px; margin: 20px 0; border-radius: 0; background: #fff; -webkit-transition: .5s width ease; transition: .5s width ease; position: relative; }
 
 .homepage main .wrap .nav-container nav.sidenav ul li:hover { width: 200px; -webkit-transition: .5s width ease; transition: .5s width ease; cursor: pointer; }
 
-.homepage main .wrap .nav-container nav.sidenav ul li:hover:before { color: #000; font-weight: bold; text-transform: uppercase; position: relative; top: 4px; left: 4px; }
+.homepage main .wrap .nav-container nav.sidenav ul li:hover p { display: block; color: #000; text-transform: uppercase; margin: 0; white-space: nowrap; height: 100%; position: relative; top: 3px; left: 7px; }
 
-.homepage main .wrap .nav-container nav.sidenav ul li:last-child { margin-bottom: 0px; }
+.homepage main .wrap .nav-container nav.sidenav ul li p { display: none; }
 
-.homepage main .wrap .nav-container nav.sidenav ul li:nth-child(1):hover:before { content: 'Project #1'; }
+.homepage main .wrap .nav-container .about-content { position: absolute; right: 0; left: 0; text-align: center; top: 75%; }
 
-.homepage main .wrap .nav-container nav.sidenav ul li:nth-child(2):hover:before { content: 'Project #2'; }
+.homepage main .wrap .nav-container .about-content p { color: #fff; text-transform: uppercase; font-weight: 700; border: 5px solid #fff; display: inline; padding: 20px 30px; -webkit-transition: .5s all ease; transition: .5s all ease; }
 
-.homepage main .wrap .nav-container nav.sidenav ul li:nth-child(3):hover:before { content: 'Project #3'; }
-
-.homepage main .wrap .nav-container nav.sidenav ul li:nth-child(4):hover:before { content: 'Project #4'; }
+.homepage main .wrap .nav-container .about-content p:hover { background: #fff; color: #000; -webkit-transition: .5s all ease; transition: .5s all ease; cursor: pointer; }
 
 .homepage main .wrap .projects-container { width: 100%; height: 100%; }
 
@@ -312,6 +310,8 @@ Homepage
 .homepage main .wrap .projects-container .collection ul li .collection-item__content .collection-item-label:hover { cursor: pointer; }
 
 .homepage main .wrap .projects-container .collection ul li .collection-item__content .collection-item-description { position: absolute; padding: 20px 40px; border: 2px solid #000; color: #000; background: #ffffff; max-width: 400px; -webkit-transform: translateY(105%); transform: translateY(105%); top: auto; bottom: 50%; left: auto; right: 20px; }
+
+.homepage main .wrap .projects-container .collection li:first-child { z-index: 99; }
 
 /* ============================================================================= Internal ============================================================================= */
 /* ============================================================================= General QA ============================================================================= */
