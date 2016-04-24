@@ -1,39 +1,10 @@
 changelog
 ---------------------------------------------
 
-#03.18.16
-
-* update site.inc.js links
-* add ecommerce html component
-* update placeholders.js to exclude --sub-options
-* update gulpfile to use libsass rather than ruby-sass
-
-
-#03.16.16
-
-* add documentation.md
-* move compiled files to src/
-* move graphics/ to src/graphics/
-* add images
-* update first link in nav partial
-* add landing and product page links in nav partial
-
-#03.15.16
-
-* slim down framework
-* remove unused variables
-* remove container and row classes
-* add .container-dark
-* add light and dark versions of variables
-* add body_classes partial
-* update headline small font sizes
-* update sponsors to logos
-* removed general.scss
-* removed nav.scss
-
 #02.15.16
 
 * update navChecker.js
+
 
 #02.05.16
 
@@ -43,7 +14,6 @@ changelog
 * remove duplicate /components folder and update gulpfile.js to fix the issue
 
 #02.01.16
-
 * update placeHolders.js
 
 #01.27.16

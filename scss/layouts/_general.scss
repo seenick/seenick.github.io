@@ -1,0 +1,209 @@
+/* =============================================================================
+General
+============================================================================= */
+
+.site-container {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	/*background: url('../graphics/project_sites.png') 0 / 100% 100%;*/
+}
+.project {
+	background: #000;
+	z-index: 100;
+	position: absolute;
+}
+.top {
+	width: 75%;
+	height: 25%;
+	top: 0;
+	left: 0;
+	background: red;
+}
+.left {
+	width: 25%;
+	height: 75%;
+	bottom: 0;
+	left: 0;		
+}
+.right {
+	width: 25%;
+	height: 75%;
+	top: 0;
+	right: 0;
+}
+.bottom {
+	width: 75%;
+	height: 25%;
+	bottom: 0;
+	right: 0;
+	background: red;		
+}
+
+/* =============================================================================
+Animations
+============================================================================= */
+
+.top {
+	moz-animation-name: topSlide;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: linear;
+	-moz-animation-duration: 1.5s;
+	-webkit-animation-name: topSlide;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-duration: 1.5s;
+	animation-name: topSlide;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-duration: 1.5s;
+}
+.left {
+	-moz-animation-name: leftSlide;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: linear;
+	-moz-animation-duration: 1.5s;
+	-webkit-animation-name: leftSlide;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-duration: 1.5s;
+	animation-name: leftSlide;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-duration: 1.5s;
+}
+.right {
+	-moz-animation-name: rightSlide;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: linear;
+	-moz-animation-duration: 1.5s;
+	-webkit-animation-name: rightSlide;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-duration: 1.5s;
+	animation-name: rightSlide;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-duration: 1.5s;
+}
+.bottom {
+	-moz-animation-name: bottomSlide;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: linear;
+	-moz-animation-duration: 1.5s;
+	-webkit-animation-name: bottomSlide;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-duration: 1.5s;
+	animation-name: bottomSlide;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-duration: 1.5s;
+}
+
+
+
+
+@-moz-keyframes topSlide {
+	0% {
+		-moz-transform: translateX(-75%);
+	}
+	100% {
+		-moz-transform: translateX(0);
+	}
+}
+@-webkit-keyframes topSlide {
+	0% {
+		-webkit-transform: translateX(-75%);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+	}
+}
+@keyframes topSlide {
+	0% {
+		transform: translateX(-75%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@-moz-keyframes leftSlide {
+	0% {
+		-moz-transform: translateY(75%);
+	}
+	100% {
+		-moz-transform: translateY(0);
+	}
+}
+@-webkit-keyframes leftSlide {
+	0% {
+		-webkit-transform: translateY(75%);
+	}
+	100% {
+		-webkit-transform: translateY(0);
+	}
+}
+@keyframes leftSlide {
+	0% {
+		transform: translateY(75%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@-moz-keyframes rightSlide {
+	0% {
+		-moz-transform: translateY(-75%);
+	}
+	100% {
+		-moz-transform: translateY(0);
+	}
+}
+@-webkit-keyframes rightSlide {
+	0% {
+		-webkit-transform: translateY(-75%);
+	}
+	100% {
+		-webkit-transform: translateY(0);
+	}
+}
+@keyframes rightSlide {
+	0% {
+		transform: translateY(-75%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@-moz-keyframes bottomSlide {
+	0% {
+		-moz-transform: translateX(75%);
+	}
+	100% {
+		-moz-transform: translateX(0);
+	}
+}
+@-webkit-keyframes bottmSlide {
+	0% {
+		-webkit-transform: translateX(75%);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+	}
+}
+@keyframes bottomSlide {
+	0% {
+		transform: translateX(75%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}

@@ -1,7 +1,6 @@
 // =============================================================================
 //	Imports
-// =============================================================================
-/* Function that updates the value field of text inputs */
+// =============================================================================/* Function that updates the value field of text inputs */
 function updateValue(input, text) {
 	input.val(text);
 
@@ -19,8 +18,7 @@ function updateValue(input, text) {
 		}
 	});
 }
-
-// =============================================================================
+// =============================================================================
 //  Background Image
 //  =================
 //  Function that applies the first image to the background of the element with options
@@ -53,8 +51,7 @@ function backgroundImage(element, options, hide) {
     $(this).css('background', 'url('+imgSrc+')' + options);
  });
 }
-
-// =============================================================================
+// =============================================================================
 //  Body Class Toggler
 //  =================
 //  function that takes an element and applies a class when clicked
@@ -68,8 +65,7 @@ function bodyClassToggler(element, elemClass){
 		$('body').toggleClass(elemClass);
 	});
 }
-
-/* Placeholders function that puts the label as a placeholder in input type text, textarea, and option 
+/* Placeholders function that puts the label as a placeholder in input type text, textarea, and option 
 /* To use replace 'form' with whatever you want to target, 'form' will do all forms on site:
 //=============================================
 /* placeHolders('form');
@@ -144,8 +140,7 @@ function placeHolders(form) {
 
   });
 }
-
-// ================================================================================================
+// ================================================================================================
 //  Accordian Menu
 //  =================
 //  applies accordian functionality to any nav with class accordian
@@ -176,8 +171,7 @@ $(document).ready(function() {
 	}
 
 });
-
-// =============================================================================
+// =============================================================================
 // Nav Checker
 // =============
 // get the combined widths of mutlitple elements and 
@@ -308,8 +302,7 @@ $(document).ready(function() {
       };
 
     })(jQuery, window, document);
-
-//textWrapper
+//textWrapper
 // wraps text in div with class name
 
 // example
@@ -327,8 +320,7 @@ function textWrapper(targetContainer, target, separator, wrapClass ) {
     }); 
   });
 }
-
-// =============================================================================
+// =============================================================================
 //  fireslider settings
 //==============================================================================
 
@@ -421,8 +413,7 @@ if ( $('.sponsors-container ul > li').length > 1 ) {
     breakpoints: bps
   });
 }
-
-function landingImage(element, options) {
+function landingImage(element, options) {
   $( element ).each(function() {
    var imgSrc = $(this).find('.masthead-container img').first().attr('src');
    $(this).find('.masthead-container').hide();
@@ -435,6 +426,7 @@ $(document).ready(function() {
 });
 
 
+
 $(document).ready(function() {
 
 	backgroundImage($(".has-bg"), "center center / cover no-repeat", 2);
@@ -443,41 +435,15 @@ $(document).ready(function() {
 	
   placeHolders('form');
 
-// =============================================================================
-//	Project Toggle
-// =============================================================================
+  $('header .wrap').navChecker();
 
-	$('.nav-container ul li:first-child').on("click", function(){
-	  $('body').toggleClass('one_is_visible').removeClass('two_is_visible').removeClass('three_is_visible').removeClass('four_is_visible');
-	});
-
-	$('.nav-container ul li:nth-child(2)').on("click", function(){
-	  $('body').toggleClass('two_is_visible').removeClass('one_is_visible').removeClass('three_is_visible').removeClass('four_is_visible');
-	});
-
-	$('.nav-container ul li:nth-child(3)').on("click", function(){
-	  $('body').toggleClass('three_is_visible').removeClass('one_is_visible').removeClass('two_is_visible').removeClass('four_is_visible');
-	});
-
-	$('.nav-container ul li:nth-child(4)').on("click", function(){
-	  $('body').toggleClass('four_is_visible').removeClass('one_is_visible').removeClass('two_is_visible').removeClass('three_is_visible');
-	});
 
 // =============================================================================
-//	Nav text grab
+//	Prject Toggle
 // =============================================================================
 
-	var navText = $('.projects-container .collection ul li:first-child .collection-item-label a').text();
-    $('.nav-container ul li:first-child').append('<p>' + navText +'</p>');
-
-    var navText2 = $('.projects-container .collection ul li:nth-child(2) .collection-item-label a').text();
-    $('.nav-container ul li:nth-child(2)').append('<p>' + navText2 +'</p>');
-
-    var navText3 = $('.projects-container .collection ul li:nth-child(3) .collection-item-label a').text();
-    $('.nav-container ul li:nth-child(3)').append('<p>' + navText3 +'</p>');
-
-	var navText4 = $('.projects-container .collection ul li:nth-child(4) .collection-item-label a').text();
-    $('.nav-container ul li:nth-child(4)').append('<p>' + navText4 +'</p>');
-
+	// $('.nav-container ul li:first-child').on("click", function(){
+	//   $('body').toggleClass('one_is_visible').removeClass('two_is_visible').removeClass('three_is_visible').removeClass('four_is_visible');
+	// });
 
 }); // end document ready
