@@ -27,8 +27,17 @@ $(document).ready(function() {
 //	Prject Toggle
 // =============================================================================
 
-	// $('.nav-container ul li:first-child').on("click", function(){
-	//   $('body').toggleClass('one_is_visible').removeClass('two_is_visible').removeClass('three_is_visible').removeClass('four_is_visible');
-	// });
+	 $('.top .tab').on("click", function(){
+	   $('body').toggleClass('top_visible').removeClass('left_visible').removeClass('right_visible').removeClass('bottom_visible');
+	 });
+	 $('.left .tab').on("click", function(){
+	   $('body').toggleClass('left_visible').removeClass('top_visible').removeClass('right_visible').removeClass('bottom_visible');
+	 });
+	 $('.right .tab').on("click", function(){
+	   $('body').toggleClass('right_visible').removeClass('left_visible').removeClass('top_visible').removeClass('bottom_visible');
+	 });
+	 $('.bottom .tab').on("click", function(){
+	   $('body').toggleClass('bottom_visible').removeClass('left_visible').removeClass('right_visible').removeClass('top_visible');
+	 });
 
 }); // end document ready

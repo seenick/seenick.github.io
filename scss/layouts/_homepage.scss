@@ -2,28 +2,3 @@
 Homepage
 ============================================================================= */
 
-.content-container {
-	width: 50%;
-	height: 51%;
-	position: fixed;
-	top: 50%;
-	transform: translateY(-50%);
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-	z-index: 10;
-	.logo {
-		width: 100%;
-		height: 100%;
-		img {
-			max-width: 300px;
-			width: 85%;
-			position: absolute;
-			left: 0;
-			right: 0;
-			margin: 0 auto;
-			top: 50%;
-			transform: translateY(-50%);
-		}
-	}
-}

@@ -159,50 +159,53 @@ General
 .site-container { height: 100%; width: 100%; position: fixed; top: 0; bottom: 0; left: 0; right: 0; /*background: url('../graphics/project_sites.png') 0 / 100% 100%;*/ }
 
 .project { background: #000; z-index: 100; position: absolute; }
+.project .tab { background: #000; }
+.project .tab:hover { cursor: pointer; }
 
-.top { width: 75%; height: 25%; top: 0; left: 0; background: red; }
+.top { width: 100%; height: 100%; -webkit-transform: translateY(-100%); transform: translateY(-100%); position: absolute; -webkit-transition: 1s ease -webkit-transform; transition: 1s ease transform; }
+.top .tab { display: block; width: 200px; height: 30px; position: absolute; bottom: -28px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
+.top .tab:hover { height: 45px; bottom: -44px; }
 
-.left { width: 25%; height: 75%; bottom: 0; left: 0; }
+.left { width: 100%; height: 100%; -webkit-transform: translateX(-100%); transform: translateX(-100%); position: absolute; -webkit-transition: 1s ease -webkit-transform; transition: 1s ease transform; }
+.left .tab { display: block; height: 200px; width: 30px; position: absolute; top: 50%; right: -28px; -webkit-transform: translateY(-50%); transform: translateY(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
+.left .tab:hover { width: 45px; right: -44px; }
 
-.right { width: 25%; height: 75%; top: 0; right: 0; }
+.right { width: 100%; height: 100%; -webkit-transform: translateX(100%); transform: translateX(100%); position: absolute; -webkit-transition: 1s ease -webkit-transform; transition: 1s ease transform; }
+.right .tab { display: block; height: 200px; width: 30px; position: absolute; top: 50%; left: -28px; -webkit-transform: translateY(-50%); transform: translateY(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
+.right .tab:hover { width: 45px; left: -44px; }
 
-.bottom { width: 75%; height: 25%; bottom: 0; right: 0; background: red; }
+.bottom { width: 100%; height: 100%; -webkit-transform: translateY(100%); transform: translateY(100%); position: absolute; -webkit-transition: 1s ease -webkit-transform; transition: 1s ease transform; }
+.bottom .tab { display: block; width: 200px; height: 30px; position: absolute; top: -28px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
+.bottom .tab:hover { height: 45px; top: -44px; }
+
+.content-container { width: 100%; height: 100%; }
+.content-container .logo { position: absolute; left: 0; right: 0; text-align: center; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+.content-container .logo img { max-width: 200px; }
+
+.top_visible .top { -webkit-transform: translateY(-25%); transform: translateY(-25%); }
+
+.left_visible .left { -webkit-transform: translateX(-25%); transform: translateX(-25%); }
+
+.right_visible .right { -webkit-transform: translateX(25%); transform: translateX(25%); }
+
+.bottom_visible .bottom { -webkit-transform: translateY(25%); transform: translateY(25%); }
 
 /* =============================================================================
 Animations
 ============================================================================= */
-.top { moz-animation-name: topSlide; -moz-animation-iteration-count: 1; -moz-animation-timing-function: linear; -moz-animation-duration: 1.5s; -webkit-animation-name: topSlide; -webkit-animation-iteration-count: 1; -webkit-animation-timing-function: linear; -webkit-animation-duration: 1.5s; -webkit-animation-name: topSlide; animation-name: topSlide; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-duration: 1.5s; animation-duration: 1.5s; }
+.logo { -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */ /* Firefox < 16 */ /* Internet Explorer */ /* Opera < 12.1 */ animation: fadein 3s; }
 
-.left { -moz-animation-name: leftSlide; -moz-animation-iteration-count: 1; -moz-animation-timing-function: linear; -moz-animation-duration: 1.5s; -webkit-animation-name: leftSlide; -webkit-animation-iteration-count: 1; -webkit-animation-timing-function: linear; -webkit-animation-duration: 1.5s; -webkit-animation-name: leftSlide; animation-name: leftSlide; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-duration: 1.5s; animation-duration: 1.5s; }
-
-.right { -moz-animation-name: rightSlide; -moz-animation-iteration-count: 1; -moz-animation-timing-function: linear; -moz-animation-duration: 1.5s; -webkit-animation-name: rightSlide; -webkit-animation-iteration-count: 1; -webkit-animation-timing-function: linear; -webkit-animation-duration: 1.5s; -webkit-animation-name: rightSlide; animation-name: rightSlide; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-duration: 1.5s; animation-duration: 1.5s; }
-
-.bottom { -moz-animation-name: bottomSlide; -moz-animation-iteration-count: 1; -moz-animation-timing-function: linear; -moz-animation-duration: 1.5s; -webkit-animation-name: bottomSlide; -webkit-animation-iteration-count: 1; -webkit-animation-timing-function: linear; -webkit-animation-duration: 1.5s; -webkit-animation-name: bottomSlide; animation-name: bottomSlide; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-duration: 1.5s; animation-duration: 1.5s; }
-@-webkit-keyframes topSlide { 0% { -webkit-transform: translateX(-75%); }
-  100% { -webkit-transform: translateX(0); } }
-@keyframes topSlide { 0% { -webkit-transform: translateX(-75%); transform: translateX(-75%); }
-  100% { -webkit-transform: translateX(0); transform: translateX(0); } }
-@-webkit-keyframes leftSlide { 0% { -webkit-transform: translateY(75%); }
-  100% { -webkit-transform: translateY(0); } }
-@keyframes leftSlide { 0% { -webkit-transform: translateY(75%); transform: translateY(75%); }
-  100% { -webkit-transform: translateY(0); transform: translateY(0); } }
-@-webkit-keyframes rightSlide { 0% { -webkit-transform: translateY(-75%); }
-  100% { -webkit-transform: translateY(0); } }
-@keyframes rightSlide { 0% { -webkit-transform: translateY(-75%); transform: translateY(-75%); }
-  100% { -webkit-transform: translateY(0); transform: translateY(0); } }
-@-webkit-keyframes bottmSlide { 0% { -webkit-transform: translateX(75%); }
-  100% { -webkit-transform: translateX(0); } }
-@-webkit-keyframes bottomSlide { 0% { -webkit-transform: translateX(75%); transform: translateX(75%); }
-  100% { -webkit-transform: translateX(0); transform: translateX(0); } }
-@keyframes bottomSlide { 0% { -webkit-transform: translateX(75%); transform: translateX(75%); }
-  100% { -webkit-transform: translateX(0); transform: translateX(0); } }
+@keyframes fadein { from { opacity: 0; }
+  to { opacity: 1; } }
+/* Firefox < 16 */
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein { from { opacity: 0; }
+  to { opacity: 1; } }
+/* Internet Explorer */
+/* Opera < 12.1 */
 /* =============================================================================
 Homepage
 ============================================================================= */
-.content-container { width: 50%; height: 51%; position: fixed; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); left: 0; right: 0; margin: 0 auto; z-index: 10; }
-.content-container .logo { width: 100%; height: 100%; }
-.content-container .logo img { max-width: 300px; width: 85%; position: absolute; left: 0; right: 0; margin: 0 auto; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
-
 /* =============================================================================
 	Internal
 ============================================================================= */
