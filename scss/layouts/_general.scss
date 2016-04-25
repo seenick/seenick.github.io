@@ -119,6 +119,8 @@ General
 		transform: translateY(-50%);
 		img {
 			max-width: 200px;
+			width:10%;
+			height: 10%;
 		}
 	}
 }
@@ -127,20 +129,40 @@ General
 	.top {
 		transform: translateY(-25%);
 	}
+	@include small-down {
+		.left, .right, .bottom {
+			opacity: 0;
+		}
+	}
 }
 .left_visible {
 	.left {
 		transform: translateX(-25%);
+	}
+	@include small-down {
+		.top, .right, .bottom {
+			opacity: 0;
+		}
 	}
 }
 .right_visible {
 	.right {
 		transform: translateX(25%);
 	}
+	@include small-down {
+		.left, .top, .bottom {
+			opacity: 0;
+		}
+	}
 }
 .bottom_visible {
 	.bottom {
 		transform: translateY(25%);
+	}
+	@include small-down {
+		.left, .right, .top {
+			opacity: 0;
+		}
 	}
 }
 
