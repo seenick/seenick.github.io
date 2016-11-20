@@ -45,7 +45,7 @@ $header-margin-bottom:	$font-size * 0.5;
 
 // COLORS //
 // Main Colors
-$color-1: null !default;
+$white: #ffffff !default;
 $color-2: null !default;
 $color-3: null !default;
 $color-4: null !default;
@@ -73,7 +73,7 @@ $color-link-3:  #0000ee !default;
 $color-hover-3: #551a8b !default;
 
 // Header Colors
-$color-header-1: #999 !default;
+$color-header-1: $white !default;
 $color-header-2: #555 !default;
 $color-header-3: #222 !default;
 
