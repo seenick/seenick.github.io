@@ -156,6 +156,9 @@ nav.mobile ul ul ul li:hover > a { background: #999; color: #fff; }
 /* =============================================================================
 General
 ============================================================================= */
+/* =============================================================================
+Homepage
+============================================================================= */
 .site-container { height: 100%; width: 100%; position: fixed; top: 0; bottom: 0; left: 0; right: 0; }
 
 /* =============================================================================
@@ -164,9 +167,9 @@ Projects - General
 .project { background: #000; z-index: 100; position: absolute; }
 .project .tab { background: #000; }
 .project .tab:hover { cursor: pointer; }
-.project .content { padding: 20px; }
-.project .content ul.gallery { list-style: none; padding: 0; margin: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; text-align: center; }
-.project .content ul.gallery li { width: 25%; -webkit-box-flex: 0; -webkit-flex: 0 1 25%; -ms-flex: 0 1 25%; flex: 0 1 25%; height: 300px; }
+.project .content { padding: 20px; height: 100%; }
+.project .content ul.gallery { list-style: none; padding: 0; margin: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; text-align: center; height: 100%; }
+.project .content ul.gallery li { width: 25%; -webkit-box-flex: 0; -webkit-flex: 0 1 25%; -ms-flex: 0 1 25%; flex: 0 1 25%; height: 400px; }
 .project .content ul.gallery li:not(:last-child) { margin-right: 20px; }
 .project .content ul.gallery li .object { background-position: top !important; width: 100%; height: 100%; position: relative; }
 .project .content ul.gallery li .object:hover .caption { opacity: 0; }
@@ -177,19 +180,19 @@ Projects - General
 /* =============================================================================
 Projects - Specific
 ============================================================================= */
-.top { width: 100%; height: 80%; -webkit-transform: translateY(-100%); transform: translateY(-100%); position: absolute; -webkit-transition: 1s ease -webkit-transform; transition: 1s ease transform; }
+.top { width: 100%; height: auto; -webkit-transform: translateY(-100%); transform: translateY(-100%); position: absolute; -webkit-transition: 1s ease -webkit-transform; transition: 1s ease transform; }
 .top .tab { display: block; width: 200px; height: 30px; position: absolute; bottom: -28px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
 .top .tab:hover { height: 45px; bottom: -44px; }
 
-.left { width: 80%; height: 100%; -webkit-transform: translateX(-100%); transform: translateX(-100%); position: absolute; -webkit-transition: 1s ease -webkit-transform; transition: 1s ease transform; }
+.left { width: auto; height: 100%; -webkit-transform: translateX(-100%); transform: translateX(-100%); position: absolute; -webkit-transition: 1s ease -webkit-transform; transition: 1s ease transform; }
 .left .tab { display: block; height: 200px; width: 30px; position: absolute; top: 50%; right: -28px; -webkit-transform: translateY(-50%); transform: translateY(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
 .left .tab:hover { width: 45px; right: -44px; }
 
-.right { width: 80%; height: 100%; -webkit-transform: translateX(125%); transform: translateX(125%); position: absolute; -webkit-transition: 1s ease -webkit-transform; transition: 1s ease transform; }
+.right { width: auto; height: 100%; right: 0; -webkit-transform: translateX(100%); transform: translateX(100%); position: absolute; -webkit-transition: 1s ease -webkit-transform; transition: 1s ease transform; }
 .right .tab { display: block; height: 200px; width: 30px; position: absolute; top: 50%; left: -28px; -webkit-transform: translateY(-50%); transform: translateY(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
 .right .tab:hover { width: 45px; left: -44px; }
 
-.bottom { width: 100%; height: 80%; -webkit-transform: translateY(125%); transform: translateY(125%); position: absolute; -webkit-transition: 1s ease -webkit-transform; transition: 1s ease transform; }
+.bottom { width: 100%; height: auto; -webkit-transform: translateY(100%); transform: translateY(100%); position: absolute; -webkit-transition: 1s ease -webkit-transform; transition: 1s ease transform; bottom: 0; }
 .bottom .tab { display: block; width: 200px; height: 30px; position: absolute; top: -28px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
 .bottom .tab:hover { height: 45px; top: -44px; }
 
@@ -209,10 +212,10 @@ Body Classes
 .left_visible .left { -webkit-transform: translateX(0%); transform: translateX(0%); z-index: 101; }
 @media only screen and (max-width: 640px) { .left_visible .top, .left_visible .right, .left_visible .bottom { opacity: 0; } }
 
-.right_visible .right { -webkit-transform: translateX(25%); transform: translateX(25%); z-index: 101; }
+.right_visible .right { -webkit-transform: translateX(0%); transform: translateX(0%); z-index: 101; }
 @media only screen and (max-width: 640px) { .right_visible .left, .right_visible .top, .right_visible .bottom { opacity: 0; } }
 
-.bottom_visible .bottom { -webkit-transform: translateY(25%); transform: translateY(25%); z-index: 101; }
+.bottom_visible .bottom { -webkit-transform: translateY(0%); transform: translateY(0%); z-index: 101; }
 @media only screen and (max-width: 640px) { .bottom_visible .left, .bottom_visible .right, .bottom_visible .top { opacity: 0; } }
 
 /* =============================================================================
@@ -228,12 +231,6 @@ Animations
   to { opacity: 1; } }
 /* Internet Explorer */
 /* Opera < 12.1 */
-/* =============================================================================
-Homepage
-============================================================================= */
-/* =============================================================================
-	Internal
-============================================================================= */
 /* =============================================================================
 	General QA
 ============================================================================= */
