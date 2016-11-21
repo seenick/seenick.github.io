@@ -1,0 +1,23 @@
+/* =============================================================================
+Projects - Bottom
+============================================================================= */
+.bottom {
+	width: 100%;
+	height: auto;
+	bottom: 0;
+	transform: translateY(100%);
+	.tab {
+		display: block;
+		width: 200px;
+		height: 30px;
+		position: absolute;
+		top: -28px;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: .5s ease all;
+		&:hover {
+			height: 45px;
+			top: -44px;
+		}
+	}
+}

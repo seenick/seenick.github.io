@@ -156,45 +156,15 @@ nav.mobile ul ul ul li:hover > a { background: #999; color: #fff; }
 /* =============================================================================
 General
 ============================================================================= */
-/* =============================================================================
-Homepage
-============================================================================= */
 .site-container { height: 100%; width: 100%; position: fixed; top: 0; bottom: 0; left: 0; right: 0; }
 
 /* =============================================================================
-Projects - General
+Homepage
 ============================================================================= */
-.project { background: #000; z-index: 100; position: absolute; }
+.project { background: #000; z-index: 100; position: absolute; position: absolute; -webkit-transition: 1s ease -webkit-transform; transition: 1s ease transform; }
 .project .tab { background: #000; }
 .project .tab:hover { cursor: pointer; }
 .project .content { padding: 20px; height: 100%; }
-.project .content ul.gallery { list-style: none; padding: 0; margin: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; text-align: center; height: 100%; }
-.project .content ul.gallery li { width: 25%; -webkit-box-flex: 0; -webkit-flex: 0 1 25%; -ms-flex: 0 1 25%; flex: 0 1 25%; height: 400px; }
-.project .content ul.gallery li:not(:last-child) { margin-right: 20px; }
-.project .content ul.gallery li .object { background-position: top !important; width: 100%; height: 100%; position: relative; }
-.project .content ul.gallery li .object:hover .caption { opacity: 0; }
-.project .content ul.gallery li .object .image img { width: 100%; max-height: 200px; }
-.project .content ul.gallery li .object .caption { width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); opacity: 1; -webkit-transition: ease opacity .5s; transition: ease opacity .5s; }
-.project .content ul.gallery li .object h4 { position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 100%; font-size: 16px; padding: 5px 10px; text-transform: uppercase; }
-
-/* =============================================================================
-Projects - Specific
-============================================================================= */
-.top { width: 100%; height: auto; -webkit-transform: translateY(-100%); transform: translateY(-100%); position: absolute; -webkit-transition: 1s ease -webkit-transform; transition: 1s ease transform; }
-.top .tab { display: block; width: 200px; height: 30px; position: absolute; bottom: -28px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
-.top .tab:hover { height: 45px; bottom: -44px; }
-
-.left { width: auto; height: 100%; -webkit-transform: translateX(-100%); transform: translateX(-100%); position: absolute; -webkit-transition: 1s ease -webkit-transform; transition: 1s ease transform; }
-.left .tab { display: block; height: 200px; width: 30px; position: absolute; top: 50%; right: -28px; -webkit-transform: translateY(-50%); transform: translateY(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
-.left .tab:hover { width: 45px; right: -44px; }
-
-.right { width: auto; height: 100%; right: 0; -webkit-transform: translateX(100%); transform: translateX(100%); position: absolute; -webkit-transition: 1s ease -webkit-transform; transition: 1s ease transform; }
-.right .tab { display: block; height: 200px; width: 30px; position: absolute; top: 50%; left: -28px; -webkit-transform: translateY(-50%); transform: translateY(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
-.right .tab:hover { width: 45px; left: -44px; }
-
-.bottom { width: 100%; height: auto; -webkit-transform: translateY(100%); transform: translateY(100%); position: absolute; -webkit-transition: 1s ease -webkit-transform; transition: 1s ease transform; bottom: 0; }
-.bottom .tab { display: block; width: 200px; height: 30px; position: absolute; top: -28px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
-.bottom .tab:hover { height: 45px; top: -44px; }
 
 /* =============================================================================
 Logo Space
@@ -231,6 +201,46 @@ Animations
   to { opacity: 1; } }
 /* Internet Explorer */
 /* Opera < 12.1 */
+/* =============================================================================
+Projects - Top
+============================================================================= */
+.top { width: 100%; height: auto; top: 0; -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+.top .tab { display: block; width: 200px; height: 30px; position: absolute; bottom: -28px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
+.top .tab:hover { height: 45px; bottom: -44px; }
+.top ul.gallery { list-style: none; padding: 0; margin: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; text-align: center; height: 100%; }
+.top ul.gallery li { width: 25%; -webkit-box-flex: 0; -webkit-flex: 0 1 25%; -ms-flex: 0 1 25%; flex: 0 1 25%; height: 400px; }
+.top ul.gallery li:not(:last-child) { margin-right: 20px; }
+.top ul.gallery li .object { background-position: top !important; width: 100%; height: 100%; position: relative; }
+.top ul.gallery li .object:hover .caption { opacity: 0; }
+.top ul.gallery li .object .image img { width: 100%; max-height: 200px; }
+.top ul.gallery li .object .caption { width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); opacity: 1; -webkit-transition: ease opacity .5s; transition: ease opacity .5s; }
+.top ul.gallery li .object h4 { position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 100%; font-size: 16px; padding: 5px 10px; text-transform: uppercase; }
+
+/* =============================================================================
+Projects - Left
+============================================================================= */
+.left { width: auto; height: 100%; left: 0; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+.left .tab { display: block; height: 200px; width: 30px; position: absolute; top: 50%; right: -28px; -webkit-transform: translateY(-50%); transform: translateY(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
+.left .tab:hover { width: 45px; right: -44px; }
+.left ul.gallery { padding: 0; margin: 0; }
+.left ul.gallery li.item { display: block; margin-bottom: 20px; }
+.left ul.gallery li.item .image { width: 250px; height: 250px; overflow: hidden; }
+.left ul.gallery li.item .image img { max-width: 500px; }
+
+/* =============================================================================
+Projects - Right
+============================================================================= */
+.right { width: auto; height: 100%; right: 0; -webkit-transform: translateX(100%); transform: translateX(100%); }
+.right .tab { display: block; height: 200px; width: 30px; position: absolute; top: 50%; left: -28px; -webkit-transform: translateY(-50%); transform: translateY(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
+.right .tab:hover { width: 45px; left: -44px; }
+
+/* =============================================================================
+Projects - Bottom
+============================================================================= */
+.bottom { width: 100%; height: auto; bottom: 0; -webkit-transform: translateY(100%); transform: translateY(100%); }
+.bottom .tab { display: block; width: 200px; height: 30px; position: absolute; top: -28px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
+.bottom .tab:hover { height: 45px; top: -44px; }
+
 /* =============================================================================
 	General QA
 ============================================================================= */

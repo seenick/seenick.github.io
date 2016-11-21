@@ -1,0 +1,23 @@
+/* =============================================================================
+Projects - Right
+============================================================================= */
+.right {
+	width: auto;
+	height: 100%;
+	right: 0;
+	transform: translateX(100%);
+	.tab {
+		display: block;
+		height: 200px;
+		width: 30px;
+		position: absolute;
+		top: 50%;
+		left: -28px;
+		transform: translateY(-50%);
+		transition: .5s ease all;
+		&:hover {
+			width: 45px;
+			left: -44px;
+		}
+	}
+}

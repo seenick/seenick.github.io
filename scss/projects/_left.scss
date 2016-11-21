@@ -1,0 +1,39 @@
+/* =============================================================================
+Projects - Left
+============================================================================= */
+.left {
+	width: auto;
+	height: 100%;
+	left: 0;
+	transform: translateX(-100%);
+	.tab {
+		display: block;
+		height: 200px;
+		width: 30px;
+		position: absolute;
+		top: 50%;
+		right: -28px;
+		transform: translateY(-50%);
+		transition: .5s ease all;
+		&:hover {
+			width: 45px;
+			right: -44px;
+		}
+	}
+	ul.gallery {
+		padding: 0;
+		margin: 0;
+		li.item {
+		display: block;
+		margin-bottom: 20px;
+		.image {
+			width: 250px;
+			height: 250px;
+			overflow: hidden;
+			img {
+			max-width: 500px;
+			}
+		}
+		}
+	}
+}
