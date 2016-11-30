@@ -27,6 +27,17 @@ Homepage
 	.content {
 		padding: 40px;
 		height: 100%;
+		@include small-down {
+		padding: 10px;
+		}
+		h1 {
+			font-size: 85px;
+			line-height: 60px;
+			margin: 0;
+			position: absolute;
+			z-index: 9;
+			text-transform: uppercase;
+		}
 	}
 }
 
