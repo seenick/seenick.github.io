@@ -20,7 +20,35 @@ Projects - Right
 			left: -44px;
 		}
 	}
-	h1 {
-	position: relative !important;
+	.content {
+		position: relative;
+		h1 {
+			position: relative;
+			line-height: 55px;
+			@include small-down {
+				line-height: 40px;
+			}
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			transform: translateY(-50%);
+			li {
+				text-align: center;
+				font-size: 50px;
+				margin: 10px 0;
+				@include small-down {
+					font-size: 40px;
+				}
+				a {
+					color: #ffffff;
+				}
+			}
+		}
 	}
 }

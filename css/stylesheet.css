@@ -250,7 +250,13 @@ Projects - Right
 .right { width: 280px; height: 100%; right: 0; -webkit-transform: translateX(100%); transform: translateX(100%); }
 .right .tab { display: block; height: 200px; width: 30px; position: absolute; top: 50%; left: -28px; -webkit-transform: translateY(-50%); transform: translateY(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
 .right .tab:hover { width: 45px; left: -44px; }
-.right h1 { position: relative !important; }
+.right .content { position: relative; }
+.right .content h1 { position: relative; line-height: 55px; }
+@media only screen and (max-width: 667px) { .right .content h1 { line-height: 40px; } }
+.right .content ul { list-style: none; padding: 0; margin: 0; position: absolute; top: 50%; left: 0; right: 0; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+.right .content ul li { text-align: center; font-size: 50px; margin: 10px 0; }
+@media only screen and (max-width: 667px) { .right .content ul li { font-size: 40px; } }
+.right .content ul li a { color: #ffffff; }
 
 /* =============================================================================
 Projects - Bottom
