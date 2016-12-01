@@ -165,9 +165,10 @@ Homepage
 .project .tab { background: #000; }
 .project .tab i.fa { position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 100%; text-align: center; font-size: 23px; color: #ffffff; -webkit-transition: .5s ease -webkit-transform; transition: .5s ease transform; }
 .project .tab:hover { cursor: pointer; }
-.project .content { padding: 40px; height: 100%; }
+.project .content { padding: 20px; height: 100%; }
 @media only screen and (max-width: 667px) { .project .content { padding: 10px; } }
-.project .content h1 { font-size: 85px; line-height: 60px; margin: 0; position: absolute; z-index: 9; text-transform: uppercase; }
+.project .content h1 { font-size: 65px; line-height: normal; margin: 0; position: absolute; z-index: 9; text-transform: uppercase; text-shadow: 0 0 8px #000; }
+@media only screen and (max-width: 800px) { .project .content h1 { font-size: 40px; } }
 
 /* =============================================================================
 Logo Space
@@ -215,7 +216,7 @@ Projects - Top
 .top { width: 100%; height: auto; top: 0; -webkit-transform: translateY(-100%); transform: translateY(-100%); }
 .top .tab { display: block; width: 200px; height: 30px; position: absolute; bottom: -28px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
 .top .tab:hover { height: 45px; bottom: -44px; }
-.top h1 { bottom: 0; left: 0px; }
+.top h1 { bottom: 0px; left: 10px; }
 .top ul.gallery { list-style: none; padding: 0; margin: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; text-align: center; height: 100%; }
 @media only screen and (max-width: 667px) { .top ul.gallery { display: block; } }
 .top ul.gallery li { width: 25%; -webkit-box-flex: 0; -webkit-flex: 0 1 25%; -ms-flex: 0 1 25%; flex: 0 1 25%; height: 200px; }
@@ -224,7 +225,7 @@ Projects - Top
 .top ul.gallery li .object { background-position: top !important; width: 100%; height: 100%; position: relative; }
 .top ul.gallery li .object:hover .caption { opacity: 0; }
 .top ul.gallery li .object .image img { width: 100%; max-height: 200px; }
-.top ul.gallery li .object .caption { width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); opacity: 1; -webkit-transition: ease opacity .5s; transition: ease opacity .5s; }
+.top ul.gallery li .object .caption { width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); opacity: 1; -webkit-transition: ease opacity .5s; transition: ease opacity .5s; position: absolute; display: none; }
 .top ul.gallery li .object h4 { position: absolute; top: 50%; left: 0; right: 0; -webkit-transform: translateY(-50%); transform: translateY(-50%); font-size: 16px; padding: 5px 10px; text-transform: uppercase; }
 
 /* =============================================================================
@@ -233,19 +234,23 @@ Projects - Left
 .left { width: auto; height: 100%; left: 0; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
 .left .tab { display: block; height: 200px; width: 30px; position: absolute; top: 50%; right: -28px; -webkit-transform: translateY(-50%); transform: translateY(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
 .left .tab:hover { width: 45px; right: -44px; }
-.left h1 { right: -6px; bottom: 0px; }
-.left ul.gallery { padding: 0; margin: 0; }
-.left ul.gallery li.item { display: block; margin-bottom: 20px; }
-.left ul.gallery li.item .image { width: 250px; height: 250px; overflow: hidden; }
-.left ul.gallery li.item .image img { max-width: 500px; }
+.left h1 { bottom: 10px; right: 0px; }
+.left ul.gallery { padding: 0; margin: 0; height: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
+.left ul.gallery li.item { display: block; margin-bottom: 20px; width: 200px; height: 21%; -webkit-box-flex: 0; -webkit-flex: 0 1 21%; -ms-flex: 0 1 21%; flex: 0 1 21%; overflow: hidden; }
+.left ul.gallery li.item .object { position: relative; height: 100%; width: 100%; background-position: top !important; /*&:hover {
+	&:before {
+		opacity: 0;
+	}
+}*/ }
+.left ul.gallery li.item .object:before { content: ''; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); opacity: 1; -webkit-transition: ease opacity .5s; transition: ease opacity .5s; position: absolute; left: 0; right: 0; }
 
 /* =============================================================================
 Projects - Right
 ============================================================================= */
-.right { width: auto; height: 100%; right: 0; -webkit-transform: translateX(100%); transform: translateX(100%); }
+.right { width: 280px; height: 100%; right: 0; -webkit-transform: translateX(100%); transform: translateX(100%); }
 .right .tab { display: block; height: 200px; width: 30px; position: absolute; top: 50%; left: -28px; -webkit-transform: translateY(-50%); transform: translateY(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
 .right .tab:hover { width: 45px; left: -44px; }
-.right h1 { bottom: 0px; left: -6px; }
+.right h1 { position: relative !important; }
 
 /* =============================================================================
 Projects - Bottom
@@ -253,14 +258,18 @@ Projects - Bottom
 .bottom { width: 100%; height: auto; bottom: 0; -webkit-transform: translateY(100%); transform: translateY(100%); }
 .bottom .tab { display: block; width: 200px; height: 30px; position: absolute; top: -28px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
 .bottom .tab:hover { height: 45px; top: -44px; }
-.bottom h1 { top: -1px; left: 0px; }
+.bottom h1 { top: 0px; left: 10px; }
 .bottom ul.gallery { list-style: none; padding: 0; margin: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; text-align: center; height: 100%; }
 @media only screen and (max-width: 667px) { .bottom ul.gallery { display: block; } }
 .bottom ul.gallery li { width: 25%; -webkit-box-flex: 0; -webkit-flex: 0 1 25%; -ms-flex: 0 1 25%; flex: 0 1 25%; height: 200px; }
 @media only screen and (max-width: 667px) { .bottom ul.gallery li { width: 100%; -webkit-box-flex: 0; -webkit-flex: 0 1 100%; -ms-flex: 0 1 100%; flex: 0 1 100%; height: 50px; margin-bottom: 10px; } }
 .bottom ul.gallery li:not(:last-child) { margin-right: 20px; }
-.bottom ul.gallery li .object { background-position: top !important; width: 100%; height: 100%; position: relative; }
-.bottom ul.gallery li .object:hover .caption { opacity: 0; }
+.bottom ul.gallery li .object { background-position: top !important; width: 100%; height: 100%; position: relative; /*&:hover {
+	&:before {
+		opacity: 0;
+	}
+}*/ }
+.bottom ul.gallery li .object:before { content: ''; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); opacity: 1; -webkit-transition: ease opacity .5s; transition: ease opacity .5s; position: absolute; left: 0; right: 0; }
 .bottom ul.gallery li .object .image img { width: 100%; max-height: 200px; }
 .bottom ul.gallery li .object .caption { width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); opacity: 1; -webkit-transition: ease opacity .5s; transition: ease opacity .5s; }
 .bottom ul.gallery li .object h4 { position: absolute; top: 50%; left: 0; right: 0; -webkit-transform: translateY(-50%); transform: translateY(-50%); font-size: 16px; padding: 5px 10px; text-transform: uppercase; }

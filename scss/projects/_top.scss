@@ -21,8 +21,8 @@ Projects - Top
 		}
 	}
 	h1 {
-			bottom: 0;
-			left: 0px;
+			bottom:0px;
+			left: 10px;
 		}
 	ul.gallery {
 		list-style: none;
@@ -70,6 +70,8 @@ Projects - Top
 					background: rgba(0, 0, 0, 0.6);
 					opacity: 1;
 					transition: ease opacity .5s;
+					position: absolute;
+					display: none;
 				}
 				h4 {
 					position: absolute;

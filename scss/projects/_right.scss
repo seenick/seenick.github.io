@@ -2,7 +2,7 @@
 Projects - Right
 ============================================================================= */
 .right {
-	width: auto;
+	width: 280px;
 	height: 100%;
 	right: 0;
 	transform: translateX(100%);
@@ -21,7 +21,6 @@ Projects - Right
 		}
 	}
 	h1 {
-		bottom: 0px;
-		left: -6px;
+	position: relative !important;
 	}
 }

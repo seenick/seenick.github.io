@@ -9,6 +9,8 @@
 
 $(document).ready(function() {
 
+	$('.caption').show();
+
 	backgroundImage($(".has-bg"), "center center / cover no-repeat", 2);
 	backgroundImage($(".has-bg__collection li"), "center center / cover no-repeat", 2);
 	backgroundImage($(".has-bg-li__collection li .collection-item-image"), "center center / cover no-repeat", 1);
