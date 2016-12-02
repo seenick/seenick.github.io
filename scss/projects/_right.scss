@@ -44,8 +44,9 @@ Projects - Right
 				text-align: center;
 				font-size: 50px;
 				margin: 10px 0;
-				@include small-down {
+				@include medium-down {
 					font-size: 40px;
+					margin: 5px 0;
 				}
 				a {
 					color: #ffffff;

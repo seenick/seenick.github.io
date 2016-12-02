@@ -184,7 +184,17 @@ $(document).ready(function() {
 	 });
 
 // =============================================================================
-//	Project Toggle
+//	Photo Showcase
 // =============================================================================
+
+	$('.showcase').on("click", function(){
+		$(this).find('img').clone().appendTo('.showcase-screen');
+		$('.showcase-screen').addClass('open');
+	});
+
+	$('.showcase-screen').on("click", function(){
+		$(this).removeClass('open');
+		$(this).find('img').remove();
+	});
 
 }); // end document ready
