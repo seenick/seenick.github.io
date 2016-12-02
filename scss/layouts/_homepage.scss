@@ -34,10 +34,7 @@ Homepage
 			font-size: 65px;
 			line-height: normal;
 			margin: 0;
-			position: absolute;
-			z-index: 9;
 			text-transform: uppercase;
-			text-shadow: 0 0 8px #000;
 			@include medium-down {
 			font-size: 40px;
 			}

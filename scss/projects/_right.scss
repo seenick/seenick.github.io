@@ -14,11 +14,6 @@ Projects - Right
 				transform: rotate(180deg) translateY(50%);
 			}
 		}
-		@include small-down {
-			.left, .top, .bottom {
-				opacity: 0;
-			}
-		}
 	}
 	.tab {
 		display: block;
@@ -36,13 +31,6 @@ Projects - Right
 	}
 	.content {
 		position: relative;
-		h1 {
-			position: relative;
-			line-height: 55px;
-			@include small-down {
-				line-height: 40px;
-			}
-		}
 		ul {
 			list-style: none;
 			padding: 0;

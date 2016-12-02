@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 	 $('.tab').on("click", function(){
 	 	$(this).parent('.project').toggleClass('open');
-	 	$(this) .parent('.project').siblings().removeClass('open');
+	 	$(this).parent('.project').siblings().removeClass('open');
 	 });
 
 // =============================================================================

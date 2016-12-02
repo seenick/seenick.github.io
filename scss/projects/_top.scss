@@ -14,11 +14,6 @@ Projects - Top
 				transform: rotate(180deg) translateY(50%);
 			}
 		}
-		@include small-down {
-			.left, .right, .bottom {
-				opacity: 0;
-			}
-		}
 	}
 	.tab {
 		display: block;
@@ -35,8 +30,7 @@ Projects - Top
 		}
 	}
 	h1 {
-		bottom:0px;
-		left: 10px;
+		text-align: center;
 	}
 	ul.gallery {
 		list-style: none;
