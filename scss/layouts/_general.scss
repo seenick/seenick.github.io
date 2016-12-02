@@ -26,6 +26,16 @@ General
 	&.open {
 		display: block;
 	}
+	.close-trigger {
+		color: #ffffff;
+		font-size: 40px;
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
 	img {
 		text-align: center;
 		width: auto;

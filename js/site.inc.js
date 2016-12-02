@@ -164,6 +164,14 @@ if ( $('.sponsors-container ul > li').length > 1 ) {
 }
 
 
+//  document key up
+$(document).keyup(function(e) {
+  if (e.keyCode == 27) {
+    $('.showcase-screen').removeClass('open');
+    $('.showcase-screen').find('img').remove();
+  }
+});
+
 
 $(document).ready(function() {
 

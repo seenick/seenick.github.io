@@ -47,6 +47,11 @@ Projects - Left
 				height: 100%;
 				width: 100%;
 				background-position: top !important;
+				opacity: .8;
+				&:hover {
+					opacity: 1;
+					cursor: pointer;
+				}
 			}
 		}
 	}

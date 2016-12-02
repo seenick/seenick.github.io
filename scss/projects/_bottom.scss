@@ -57,10 +57,15 @@ Projects - Bottom
 				margin-right: 20px;
 			}
 			.showcase {
-				background-position: top !important;
+				background-position: center !important;
 				width: 100%;
 				height: 100%;
 				position: relative;
+				opacity: .8;
+				&:hover {
+					opacity: 1;
+					cursor: pointer;
+				}
 				.image {
 					img {
 						width: 100%;
