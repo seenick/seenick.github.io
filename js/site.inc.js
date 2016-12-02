@@ -1,6 +1,7 @@
 // =============================================================================
 //	Imports
-// =============================================================================/* Function that updates the value field of text inputs */
+// =============================================================================
+/* Function that updates the value field of text inputs */
 function updateValue(input, text) {
 	input.val(text);
 
@@ -18,7 +19,8 @@ function updateValue(input, text) {
 		}
 	});
 }
-// =============================================================================
+
+// =============================================================================
 //  Background Image
 //  =================
 //  Function that applies the first image to the background of the element with options
@@ -51,7 +53,8 @@ function backgroundImage(element, options, hide) {
     $(this).css('background', 'url('+imgSrc+')' + options);
  });
 }
-// =============================================================================
+
+// =============================================================================
 //  Body Class Toggler
 //  =================
 //  function that takes an element and applies a class when clicked
@@ -65,7 +68,8 @@ function bodyClassToggler(element, elemClass){
 		$('body').toggleClass(elemClass);
 	});
 }
-// =============================================================================
+
+// =============================================================================
 //  fireslider settings
 //==============================================================================
 
@@ -174,17 +178,13 @@ $(document).ready(function() {
 //	Project Toggle
 // =============================================================================
 
-	 $('.top .tab').on("click", function(){
-	   $('body').toggleClass('top_visible').removeClass('left_visible').removeClass('right_visible').removeClass('bottom_visible');
+	 $('.tab').on("click", function(){
+	 	$(this).parent('.project').toggleClass('open');
+	 	$(this) .parent('.project').siblings().removeClass('open');
 	 });
-	 $('.left .tab').on("click", function(){
-	   $('body').toggleClass('left_visible').removeClass('top_visible').removeClass('right_visible').removeClass('bottom_visible');
-	 });
-	 $('.right .tab').on("click", function(){
-	   $('body').toggleClass('right_visible').removeClass('left_visible').removeClass('top_visible').removeClass('bottom_visible');
-	 });
-	 $('.bottom .tab').on("click", function(){
-	   $('body').toggleClass('bottom_visible').removeClass('left_visible').removeClass('right_visible').removeClass('top_visible');
-	 });
+
+// =============================================================================
+//	Project Toggle
+// =============================================================================
 
 }); // end document ready

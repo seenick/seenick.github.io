@@ -179,25 +179,6 @@ Logo Space
 @media only screen and (max-width: 667px) { .content-container .logo img { width: 75px; } }
 
 /* =============================================================================
-Body Classes
-============================================================================= */
-.top_visible .top { -webkit-transform: translateY(0%); transform: translateY(0%); z-index: 101; }
-.top_visible .top .tab i.fa { -webkit-transform: rotate(180deg) translateY(50%); transform: rotate(180deg) translateY(50%); }
-@media only screen and (max-width: 667px) { .top_visible .left, .top_visible .right, .top_visible .bottom { opacity: 0; } }
-
-.left_visible .left { -webkit-transform: translateX(0%); transform: translateX(0%); z-index: 101; }
-.left_visible .left .tab i.fa { -webkit-transform: rotate(180deg) translateY(50%); transform: rotate(180deg) translateY(50%); }
-@media only screen and (max-width: 667px) { .left_visible .top, .left_visible .right, .left_visible .bottom { opacity: 0; } }
-
-.right_visible .right { -webkit-transform: translateX(0%); transform: translateX(0%); z-index: 101; }
-.right_visible .right .tab i.fa { -webkit-transform: rotate(180deg) translateY(50%); transform: rotate(180deg) translateY(50%); }
-@media only screen and (max-width: 667px) { .right_visible .left, .right_visible .top, .right_visible .bottom { opacity: 0; } }
-
-.bottom_visible .bottom { -webkit-transform: translateY(0%); transform: translateY(0%); z-index: 101; }
-.bottom_visible .bottom .tab i.fa { -webkit-transform: rotate(180deg) translateY(50%); transform: rotate(180deg) translateY(50%); }
-@media only screen and (max-width: 667px) { .bottom_visible .left, .bottom_visible .right, .bottom_visible .top { opacity: 0; } }
-
-/* =============================================================================
 Animations
 ============================================================================= */
 .logo { -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */ /* Firefox < 16 */ /* Internet Explorer */ /* Opera < 12.1 */ animation: fadein 3s; }
@@ -214,6 +195,9 @@ Animations
 Projects - Top
 ============================================================================= */
 .top { width: 100%; height: auto; top: 0; -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+.top.open { -webkit-transform: translateY(0%); transform: translateY(0%); z-index: 101; }
+.top.open .tab i.fa { -webkit-transform: rotate(180deg) translateY(50%); transform: rotate(180deg) translateY(50%); }
+@media only screen and (max-width: 667px) { .top.open .left, .top.open .right, .top.open .bottom { opacity: 0; } }
 .top .tab { display: block; width: 200px; height: 30px; position: absolute; bottom: -28px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
 .top .tab:hover { height: 45px; bottom: -44px; }
 .top h1 { bottom: 0px; left: 10px; }
@@ -232,6 +216,9 @@ Projects - Top
 Projects - Left
 ============================================================================= */
 .left { width: auto; height: 100%; left: 0; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+.left.open { -webkit-transform: translateX(0%); transform: translateX(0%); z-index: 101; }
+.left.open .tab i.fa { -webkit-transform: rotate(180deg) translateY(50%); transform: rotate(180deg) translateY(50%); }
+@media only screen and (max-width: 667px) { .left.open .top, .left.open .right, .left.open .bottom { opacity: 0; } }
 .left .tab { display: block; height: 200px; width: 30px; position: absolute; top: 50%; right: -28px; -webkit-transform: translateY(-50%); transform: translateY(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
 .left .tab:hover { width: 45px; right: -44px; }
 .left h1 { bottom: 10px; right: 0px; }
@@ -241,13 +228,16 @@ Projects - Left
 	&:before {
 		opacity: 0;
 	}
-}*/ }
+	}*/ }
 .left ul.gallery li.item .object:before { content: ''; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); opacity: 1; -webkit-transition: ease opacity .5s; transition: ease opacity .5s; position: absolute; left: 0; right: 0; }
 
 /* =============================================================================
 Projects - Right
 ============================================================================= */
 .right { width: 280px; height: 100%; right: 0; -webkit-transform: translateX(100%); transform: translateX(100%); }
+.right.open { -webkit-transform: translateX(0%); transform: translateX(0%); z-index: 101; }
+.right.open .tab i.fa { -webkit-transform: rotate(180deg) translateY(50%); transform: rotate(180deg) translateY(50%); }
+@media only screen and (max-width: 667px) { .right.open .left, .right.open .top, .right.open .bottom { opacity: 0; } }
 .right .tab { display: block; height: 200px; width: 30px; position: absolute; top: 50%; left: -28px; -webkit-transform: translateY(-50%); transform: translateY(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
 .right .tab:hover { width: 45px; left: -44px; }
 .right .content { position: relative; }
@@ -262,6 +252,9 @@ Projects - Right
 Projects - Bottom
 ============================================================================= */
 .bottom { width: 100%; height: auto; bottom: 0; -webkit-transform: translateY(100%); transform: translateY(100%); }
+.bottom.open { -webkit-transform: translateY(0%); transform: translateY(0%); z-index: 101; }
+.bottom.open .tab i.fa { -webkit-transform: rotate(180deg) translateY(50%); transform: rotate(180deg) translateY(50%); }
+@media only screen and (max-width: 667px) { .bottom.open .left, .bottom.open .right, .bottom.open .top { opacity: 0; } }
 .bottom .tab { display: block; width: 200px; height: 30px; position: absolute; top: -28px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
 .bottom .tab:hover { height: 45px; top: -44px; }
 .bottom h1 { top: 0px; left: 10px; }
@@ -274,7 +267,7 @@ Projects - Bottom
 	&:before {
 		opacity: 0;
 	}
-}*/ }
+	}*/ }
 .bottom ul.gallery li .object:before { content: ''; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); opacity: 1; -webkit-transition: ease opacity .5s; transition: ease opacity .5s; position: absolute; left: 0; right: 0; }
 .bottom ul.gallery li .object .image img { width: 100%; max-height: 200px; }
 .bottom ul.gallery li .object .caption { width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); opacity: 1; -webkit-transition: ease opacity .5s; transition: ease opacity .5s; }

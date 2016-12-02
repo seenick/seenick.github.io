@@ -20,17 +20,13 @@ $(document).ready(function() {
 //	Project Toggle
 // =============================================================================
 
-	 $('.top .tab').on("click", function(){
-	   $('body').toggleClass('top_visible').removeClass('left_visible').removeClass('right_visible').removeClass('bottom_visible');
+	 $('.tab').on("click", function(){
+	 	$(this).parent('.project').toggleClass('open');
+	 	$(this) .parent('.project').siblings().removeClass('open');
 	 });
-	 $('.left .tab').on("click", function(){
-	   $('body').toggleClass('left_visible').removeClass('top_visible').removeClass('right_visible').removeClass('bottom_visible');
-	 });
-	 $('.right .tab').on("click", function(){
-	   $('body').toggleClass('right_visible').removeClass('left_visible').removeClass('top_visible').removeClass('bottom_visible');
-	 });
-	 $('.bottom .tab').on("click", function(){
-	   $('body').toggleClass('bottom_visible').removeClass('left_visible').removeClass('right_visible').removeClass('top_visible');
-	 });
+
+// =============================================================================
+//	Project Toggle
+// =============================================================================
 
 }); // end document ready
