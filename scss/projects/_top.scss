@@ -29,6 +29,11 @@ Projects - Top
 			bottom: -44px;
 		}
 	}
+	.content {
+		@include medium-down {
+			padding: 0;
+		}
+	}
 	h1 {
 		text-align: center;
 	}
@@ -40,7 +45,7 @@ Projects - Top
 		justify-content: space-between;
 		text-align: center;
 		height: 100%;
-		@include small-down {
+		@include medium-down {
 			display: block;
 		}
 		li {
@@ -51,10 +56,13 @@ Projects - Top
 				width: 100%;
 				flex: 0 1 100%;
 				height: 50px;
-				margin-bottom: 10px;
+				margin-bottom: 5px;
 			}
 			&:not(:last-child) {
 				margin-right: 20px;
+				@include small-down {
+					margin-right: 0px;
+				}
 			}
 			.object {
 				background-position: top !important;

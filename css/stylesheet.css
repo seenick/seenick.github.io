@@ -39,22 +39,22 @@ p { font-family: inherit; font-weight: inherit; font-size: inherit; line-height:
 h1, h2, h3, h4, h5, h6 { font-family: "Lato", sans-serif; font-weight: bold; color: #ffffff; margin-top: 3.2px; margin-bottom: 8px; line-height: 1.6; }
 
 h1 { font-size: 44px; }
-@media only screen and (max-width: 667px) { h1 { font-size: 44px; } }
+@media only screen and (max-width: 699px) { h1 { font-size: 44px; } }
 
 h2 { font-size: 37px; }
-@media only screen and (max-width: 667px) { h2 { font-size: 37px; } }
+@media only screen and (max-width: 699px) { h2 { font-size: 37px; } }
 
 h3 { font-size: 27px; }
-@media only screen and (max-width: 667px) { h3 { font-size: 27px; } }
+@media only screen and (max-width: 699px) { h3 { font-size: 27px; } }
 
 h4 { font-size: 23px; }
-@media only screen and (max-width: 667px) { h4 { font-size: 23px; } }
+@media only screen and (max-width: 699px) { h4 { font-size: 23px; } }
 
 h5 { font-size: 18px; }
-@media only screen and (max-width: 667px) { h5 { font-size: 18px; } }
+@media only screen and (max-width: 699px) { h5 { font-size: 18px; } }
 
 h6 { font-size: 16px; }
-@media only screen and (max-width: 667px) { h6 { font-size: 16px; } }
+@media only screen and (max-width: 699px) { h6 { font-size: 16px; } }
 
 /* Default hr styles */
 hr { border: solid #999; }
@@ -64,7 +64,7 @@ hr { border: solid #999; }
 ============================================================================= */
 .spotlight--list ul { height: 480px; }
 @media only screen and (max-width: 800px) { .spotlight--list ul { height: 480px; } }
-@media only screen and (max-width: 667px) { .spotlight--list ul { height: 480px; } }
+@media only screen and (max-width: 699px) { .spotlight--list ul { height: 480px; } }
 .spotlight--list li { opacity: 1; }
 .spotlight--list .slider__controls .slider-controls-nav .slider-nav:after { font-size: 120px; color: red; }
 .spotlight--list .slider__controls .slider-controls-nav .slider-nav--prev:after { content: '\f104'; }
@@ -172,9 +172,9 @@ Homepage
 .project .tab i.fa { position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 100%; text-align: center; font-size: 23px; color: #ffffff; -webkit-transition: .5s ease -webkit-transform; transition: .5s ease transform; }
 .project .tab:hover { cursor: pointer; }
 .project .content { padding: 20px; height: 100%; }
-@media only screen and (max-width: 667px) { .project .content { padding: 10px; } }
+@media only screen and (max-width: 699px) { .project .content { padding: 10px; } }
 .project .content h1 { font-size: 65px; line-height: normal; margin: 0; text-transform: uppercase; }
-@media only screen and (max-width: 800px) { .project .content h1 { font-size: 40px; } }
+@media only screen and (max-width: 800px) { .project .content h1 { font-size: 32px; } }
 
 /* =============================================================================
 Logo Space
@@ -182,7 +182,7 @@ Logo Space
 .content-container { width: 100%; height: 100%; }
 .content-container .logo { position: absolute; left: 0; right: 0; text-align: center; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 .content-container .logo img { max-width: 150px; height: auto; }
-@media only screen and (max-width: 667px) { .content-container .logo img { width: 75px; } }
+@media only screen and (max-width: 800px) { .content-container .logo img { width: 75px; } }
 
 /* =============================================================================
 Animations
@@ -205,12 +205,14 @@ Projects - Top
 .top.open .tab i.fa { -webkit-transform: rotate(180deg) translateY(50%); transform: rotate(180deg) translateY(50%); }
 .top .tab { display: block; width: 200px; height: 30px; position: absolute; bottom: -28px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
 .top .tab:hover { height: 45px; bottom: -44px; }
+@media only screen and (max-width: 800px) { .top .content { padding: 0; } }
 .top h1 { text-align: center; }
 .top ul.gallery { list-style: none; padding: 0; margin: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; text-align: center; height: 100%; }
-@media only screen and (max-width: 667px) { .top ul.gallery { display: block; } }
+@media only screen and (max-width: 800px) { .top ul.gallery { display: block; } }
 .top ul.gallery li { width: 25%; -webkit-box-flex: 0; -webkit-flex: 0 1 25%; -ms-flex: 0 1 25%; flex: 0 1 25%; height: 200px; }
-@media only screen and (max-width: 667px) { .top ul.gallery li { width: 100%; -webkit-box-flex: 0; -webkit-flex: 0 1 100%; -ms-flex: 0 1 100%; flex: 0 1 100%; height: 50px; margin-bottom: 10px; } }
+@media only screen and (max-width: 699px) { .top ul.gallery li { width: 100%; -webkit-box-flex: 0; -webkit-flex: 0 1 100%; -ms-flex: 0 1 100%; flex: 0 1 100%; height: 50px; margin-bottom: 5px; } }
 .top ul.gallery li:not(:last-child) { margin-right: 20px; }
+@media only screen and (max-width: 699px) { .top ul.gallery li:not(:last-child) { margin-right: 0px; } }
 .top ul.gallery li .object { background-position: top !important; width: 100%; height: 100%; position: relative; }
 .top ul.gallery li .object:hover .caption { opacity: 0; }
 .top ul.gallery li .object .image img { width: 100%; max-height: 200px; }
@@ -225,8 +227,9 @@ Projects - Left
 .left.open .tab i.fa { -webkit-transform: rotate(180deg) translateY(50%); transform: rotate(180deg) translateY(50%); }
 .left .tab { display: block; height: 200px; width: 30px; position: absolute; top: 50%; right: -28px; -webkit-transform: translateY(-50%); transform: translateY(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
 .left .tab:hover { width: 45px; right: -44px; }
-.left ul.gallery { padding: 0; margin: 0; height: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
-.left ul.gallery li.item { display: block; margin-bottom: 20px; width: 200px; height: 21%; -webkit-box-flex: 0; -webkit-flex: 0 1 21%; -ms-flex: 0 1 21%; flex: 0 1 21%; overflow: hidden; }
+.left ul.gallery { padding: 0; margin: 0; height: 100%; }
+.left ul.gallery li.item { display: block; margin-bottom: 20px; height: 21%; overflow: hidden; }
+@media only screen and (max-width: 800px) { .left ul.gallery li.item { height: 50px; margin-bottom: 5px; } }
 .left ul.gallery li.item .showcase { position: relative; height: 100%; width: 100%; background-position: top !important; opacity: .8; }
 .left ul.gallery li.item .showcase:hover { opacity: 1; cursor: pointer; }
 
@@ -252,11 +255,12 @@ Projects - Bottom
 .bottom.open .tab i.fa { -webkit-transform: rotate(180deg) translateY(50%); transform: rotate(180deg) translateY(50%); }
 .bottom .tab { display: block; width: 200px; height: 30px; position: absolute; top: -28px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
 .bottom .tab:hover { height: 45px; top: -44px; }
+@media only screen and (max-width: 800px) { .bottom .content { padding: 0; } }
 .bottom h1 { text-align: center; }
 .bottom ul.gallery { list-style: none; padding: 0; margin: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; text-align: center; height: 100%; }
-@media only screen and (max-width: 667px) { .bottom ul.gallery { display: block; } }
+@media only screen and (max-width: 699px) { .bottom ul.gallery { display: block; } }
 .bottom ul.gallery li { width: 25%; -webkit-box-flex: 0; -webkit-flex: 0 1 25%; -ms-flex: 0 1 25%; flex: 0 1 25%; height: 200px; }
-@media only screen and (max-width: 667px) { .bottom ul.gallery li { width: 100%; -webkit-box-flex: 0; -webkit-flex: 0 1 100%; -ms-flex: 0 1 100%; flex: 0 1 100%; height: 50px; margin-bottom: 10px; } }
+@media only screen and (max-width: 699px) { .bottom ul.gallery li { width: 100%; -webkit-box-flex: 0; -webkit-flex: 0 1 100%; -ms-flex: 0 1 100%; flex: 0 1 100%; height: 50px; margin-top: 5px; } }
 .bottom ul.gallery li:not(:last-child) { margin-right: 20px; }
 .bottom ul.gallery li .showcase { background-position: center !important; width: 100%; height: 100%; position: relative; opacity: .8; }
 .bottom ul.gallery li .showcase:hover { opacity: 1; cursor: pointer; }

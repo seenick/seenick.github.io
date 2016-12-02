@@ -33,15 +33,15 @@ Projects - Left
 		padding: 0;
 		margin: 0;
 		height: 100%;
-		display: flex;
-		flex-direction: column;
 		li.item {
 			display: block;
 			margin-bottom: 20px;
-			width: 200px;
 			height: 21%;
-			flex: 0 1 21%;
 			overflow: hidden;
+			@include medium-down {
+				height: 50px;
+				margin-bottom: 5px;
+			}
 			.showcase {
 				position: relative;
 				height: 100%;
