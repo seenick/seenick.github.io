@@ -45,7 +45,7 @@ Projects - Top
 		justify-content: space-between;
 		text-align: center;
 		height: 100%;
-		@include medium-down {
+		@include small-down {
 			display: block;
 		}
 		li {
