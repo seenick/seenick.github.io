@@ -2,7 +2,7 @@
 Projects - Right
 ============================================================================= */
 .right {
-	width: 280px;
+	width: auto;
 	height: 100%;
 	right: 0;
 	transform: translateX(100%);
@@ -31,6 +31,9 @@ Projects - Right
 	}
 	.content {
 		position: relative;
+		h1 {
+		max-width: 200px;
+		}
 		ul {
 			list-style: none;
 			padding: 0;

@@ -162,7 +162,7 @@ General
 .showcase-screen.open { display: block; }
 .showcase-screen .close-trigger { color: #ffffff; font-size: 40px; position: absolute; right: 20px; top: 20px; }
 .showcase-screen .close-trigger:hover { cursor: pointer; }
-.showcase-screen img { text-align: center; width: auto; max-height: 80%; position: absolute; top: 50%; left: 50%; -webkit-transform: translateY(-50%) translateX(-50%); transform: translateY(-50%) translateX(-50%); }
+.showcase-screen img { text-align: center; width: auto; max-height: 80%; max-width: 80%; position: absolute; top: 50%; left: 50%; -webkit-transform: translateY(-50%) translateX(-50%); transform: translateY(-50%) translateX(-50%); }
 
 /* =============================================================================
 Homepage
@@ -171,9 +171,9 @@ Homepage
 .project .tab { background: #000; }
 .project .tab i.fa { position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 100%; text-align: center; font-size: 23px; color: #ffffff; -webkit-transition: .5s ease -webkit-transform; transition: .5s ease transform; }
 .project .tab:hover { cursor: pointer; }
-.project .content { padding: 20px; height: 100%; }
+.project .content { padding: 20px; height: 100%; box-sizing: border-box; }
 @media only screen and (max-width: 699px) { .project .content { padding: 10px; } }
-.project .content h1 { font-size: 65px; line-height: normal; margin: 0; text-transform: uppercase; }
+.project .content h1 { font-size: 50px; line-height: normal; margin: 0; text-transform: uppercase; }
 @media only screen and (max-width: 800px) { .project .content h1 { font-size: 32px; } }
 
 /* =============================================================================
@@ -227,21 +227,24 @@ Projects - Left
 .left.open .tab i.fa { -webkit-transform: rotate(180deg) translateY(50%); transform: rotate(180deg) translateY(50%); }
 .left .tab { display: block; height: 200px; width: 30px; position: absolute; top: 50%; right: -28px; -webkit-transform: translateY(-50%); transform: translateY(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
 .left .tab:hover { width: 45px; right: -44px; }
-.left ul.gallery { padding: 0; margin: 0; height: 100%; }
-.left ul.gallery li.item { display: block; margin-bottom: 20px; height: 21%; overflow: hidden; }
+.left .content { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
+.left ul.gallery { padding: 0; margin: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; height: 100%; }
+.left ul.gallery li.item { display: block; margin-bottom: 20px; height: 25%; -webkit-box-flex: 0; -webkit-flex: 0 1 25%; -ms-flex: 0 1 25%; flex: 0 1 25%; width: 200px; overflow: hidden; }
 @media only screen and (max-width: 800px) { .left ul.gallery li.item { height: 50px; margin-bottom: 5px; } }
 .left ul.gallery li.item .showcase { position: relative; height: 100%; width: 100%; background-position: top !important; opacity: .8; }
 .left ul.gallery li.item .showcase:hover { opacity: 1; cursor: pointer; }
+.left ul.gallery li.item .showcase .image img { width: 100%; height: 100%; }
 
 /* =============================================================================
 Projects - Right
 ============================================================================= */
-.right { width: 280px; height: 100%; right: 0; -webkit-transform: translateX(100%); transform: translateX(100%); }
+.right { width: auto; height: 100%; right: 0; -webkit-transform: translateX(100%); transform: translateX(100%); }
 .right.open { -webkit-transform: translateX(0%); transform: translateX(0%); z-index: 101; }
 .right.open .tab i.fa { -webkit-transform: rotate(180deg) translateY(50%); transform: rotate(180deg) translateY(50%); }
 .right .tab { display: block; height: 200px; width: 30px; position: absolute; top: 50%; left: -28px; -webkit-transform: translateY(-50%); transform: translateY(-50%); -webkit-transition: .5s ease all; transition: .5s ease all; }
 .right .tab:hover { width: 45px; left: -44px; }
 .right .content { position: relative; }
+.right .content h1 { max-width: 200px; }
 .right .content ul { list-style: none; padding: 0; margin: 0; position: absolute; top: 50%; left: 0; right: 0; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 .right .content ul li { text-align: center; font-size: 50px; margin: 10px 0; }
 @media only screen and (max-width: 800px) { .right .content ul li { font-size: 40px; margin: 5px 0; } }

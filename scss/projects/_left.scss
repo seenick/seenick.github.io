@@ -29,14 +29,22 @@ Projects - Left
 			right: -44px;
 		}
 	}
+	.content {
+	display: flex;
+	flex-direction: column;
+	}
 	ul.gallery {
 		padding: 0;
 		margin: 0;
+		display: flex;
+		flex-direction: column;
 		height: 100%;
 		li.item {
 			display: block;
 			margin-bottom: 20px;
-			height: 21%;
+			height: 25%;
+			flex: 0 1 25%;
+			width: 200px;
 			overflow: hidden;
 			@include medium-down {
 				height: 50px;
@@ -51,6 +59,12 @@ Projects - Left
 				&:hover {
 					opacity: 1;
 					cursor: pointer;
+				}
+				.image {
+			img {
+			width: 100%;
+			height: 100%;
+			}	
 				}
 			}
 		}
