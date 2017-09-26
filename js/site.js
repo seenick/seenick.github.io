@@ -1,10 +1,6 @@
 // =============================================================================
 //	Imports
 // =============================================================================
-//= include components/updatevalue.js
-//= include components/backgroundImage.js
-//= include components/bodyClassToggler.js
-//= include components/fireslider_settings.js
 
 //  document key up
 $(document).keyup(function(e) {
