@@ -2,23 +2,21 @@
 //	Imports
 // =============================================================================
 
-//  document key up
-$(document).keyup(function(e) {
-  if (e.keyCode == 27) {
-    $('.showcase-screen').removeClass('open');
-    $('.showcase-screen').find('img').remove();
-  }
-});
-
-
 $(document).ready(function() {
 
 	$('.caption').show();
 
-	backgroundImage($(".has-bg"), "center center / cover no-repeat", 2);
-	backgroundImage($(".has-bg__collection li"), "center center / cover no-repeat", 2);
-	backgroundImage($(".has-bg-li__collection li .collection-item-image"), "center center / cover no-repeat", 1);
 
+// =============================================================================
+//	Background image
+// =============================================================================
+
+	$('.has-bg').each(function(){
+		var imgSrc = $(this).find('img').attr('src');
+
+		$(this).css('background-image', 'url(' + imgSrc + ')');
+		$(this).find('img').hide();
+	});
 
 // =============================================================================
 //	Project Toggle
@@ -44,3 +42,14 @@ $(document).ready(function() {
 	});
 
 }); // end document ready
+
+
+// =============================================================================
+//	Document Keyup
+// =============================================================================
+$(document).keyup(function(e) {
+  if (e.keyCode == 27) {
+    $('.showcase-screen').removeClass('open');
+    $('.showcase-screen').find('img').remove();
+  }
+});
