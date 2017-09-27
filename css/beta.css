@@ -1,0 +1,122 @@
+/* =============================================================================
+	Beta CSS
+	============================================================================= */
+
+	/* ============== Structure ============== */
+
+	body { margin: 0;}
+
+
+	/* ============== Header ============== */
+
+	header {}
+
+	header .logo-container {
+		max-width: 1200px;
+		margin: 50px auto 0 auto;
+		text-align: center;
+	}
+
+	header .logo-container img {
+		width: 155px;
+	}
+
+	/* ============== Main Content ============== */
+
+	.main { position: relative; overflow: hidden; padding-top: 326px;}
+
+	.main .section { 
+		color: #ffffff; 
+		text-align: center; 
+		font-family: sans-serif;
+	}
+
+	.main .section-1 {
+		background: #000000;
+		height: 300px;
+		transform: rotate(5deg);
+		margin-top: 90px;
+		position: absolute;
+		left: -100px;
+		right: -100px;
+		top: 0;
+	}
+
+	.main .section-2 {
+		height: 300px;
+		background: #ffffff;
+		position: relative;
+		box-shadow: 0 0 0 10px black;
+		transform: rotate(-5deg);
+		width: 145%;
+		left: -100px;
+		right: -500px;
+		z-index: 9;
+	}
+
+	.main .section-3 {
+		height: 100px;
+		background: #000000;
+		position: relative;
+		transform: rotate(-5deg);
+		width: 145%;
+		left: -100px;
+		margin-bottom: 100px;
+	}
+
+	.main .section-4 {
+		height: 300px;
+		background: #000000;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	.gallery {
+		display: flex;
+		align-items: center;
+		justify-content: left;
+		flex-wrap: nowrap;
+	}
+
+	.item {
+		height: 200px;
+		width: 200px;
+		background: #ffffff;
+		display: inline-block;
+		margin: 50px 20px 0 20px;
+		box-shadow: 0 0 15px -3px #000000;
+		background-position: top; 
+		background-size: cover; 
+		background-repeat: no-repeat;
+		position: relative;
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
+	}
+
+	.item .image img { 
+		width: 100%; 
+		height: 100%; 
+	}
+
+
+
+	/* ============== Showcase screen ============== */
+
+	.showcase-screen { height: 100%; width: 100%; position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.75); z-index: 999; display: none; }
+	.showcase-screen.open { display: block; }
+	.showcase-screen .close-trigger { color: #ffffff; font-size: 40px; position: absolute; right: 20px; top: 20px; }
+	.showcase-screen .close-trigger:hover { cursor: pointer; }
+	.showcase-screen img { text-align: center; width: auto; max-height: 80%; max-width: 80%; position: absolute; top: 50%; left: 50%; -webkit-transform: translateY(-50%) translateX(-50%); transform: translateY(-50%) translateX(-50%); }
+
+
+	/* ============== Media queries ============== */
+
+	/*@media only screen and (max-width: 1200px) {
+
+		.item:nth-child(n+6) {
+			display: none;
+		}
+
+	}*/
