@@ -34,6 +34,7 @@
 	.main .section-1 {
 		background: #000000;
 		height: 300px;
+		-webkit-transform: rotate(5deg);
 		transform: rotate(5deg);
 		margin-top: 90px;
 		position: absolute;
@@ -46,7 +47,9 @@
 		height: 300px;
 		background: #ffffff;
 		position: relative;
+		-webkit-box-shadow: 0 0 0 10px black;
 		box-shadow: 0 0 0 10px black;
+		-webkit-transform: rotate(-5deg);
 		transform: rotate(-5deg);
 		width: 145%;
 		left: -100px;
@@ -58,6 +61,7 @@
 		height: 100px;
 		background: #000000;
 		position: relative;
+		-webkit-transform: rotate(-5deg);
 		transform: rotate(-5deg);
 		width: 145%;
 		left: -100px;
@@ -74,9 +78,16 @@
 	}
 
 	.gallery {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
 		align-items: center;
+		-webkit-box-pack: left;
+		-ms-flex-pack: left;
 		justify-content: left;
+		-ms-flex-wrap: nowrap;
 		flex-wrap: nowrap;
 	}
 
@@ -86,6 +97,7 @@
 		background: #ffffff;
 		display: inline-block;
 		margin: 50px 20px 0 20px;
+		-webkit-box-shadow: 0 0 15px -3px #000000;
 		box-shadow: 0 0 15px -3px #000000;
 		background-position: top; 
 		background-size: cover; 

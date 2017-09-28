@@ -11,6 +11,7 @@
 .homepage main .wrap .nav-container {
 	background: #000;
 	position: relative;
+	-webkit-transition: .5s background ease;
 	transition: .5s background ease;
 }
 
@@ -39,11 +40,13 @@ nav.sidenav {
     left: 0;
     right: 0;
     top: 50%;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
 .two_is_visible main .wrap .nav-container, .four_is_visible main .wrap .nav-container{
 	background: #fff;
+	-webkit-transition: 1s background ease;
 	transition: 1s background ease;
 }
 
@@ -74,6 +77,7 @@ nav.sidenav {
 }
 
 .homepage main .wrap .projects-container .collection ul li .collection-item__content .collection-item-description {
+	-webkit-transform: translateY(105%);
 	transform: translateY(105%);
 	top: auto;
 	bottom: 50%;
@@ -91,11 +95,13 @@ nav.sidenav {
 
 .homepage main .wrap .projects-container .collection ul li:first-child, .two_is_visible .wrap .projects-container .collection ul li:nth-child(2), .three_is_visible .wrap .projects-container .collection ul li:nth-child(3), .four_is_visible .wrap .projects-container .collection ul li:nth-child(4) {
 	opacity: 1;
+	-webkit-transition: 1s opacity ease;
 	transition: 1s opacity ease;
 }
 
 .homepage main .wrap .projects-container .collection ul li, .homepage.two_is_visible .wrap .projects-container .collection ul li:first-child, .homepage.three_is_visible .wrap .projects-container .collection ul li:first-child, .homepage.four_is_visible .wrap .projects-container .collection ul li:first-child {
 	opacity: 0;
 	display: block;
+	-webkit-transition: 1s opacity ease;
 	transition: 1s opacity ease;
 }
