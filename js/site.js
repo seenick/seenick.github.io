@@ -1,59 +1,27 @@
-// =============================================================================
-//	Imports
-// =============================================================================
+/*
+** pagePiling
+*/
 
 $(document).ready(function() {
-
-	$('.caption').show();
-
-// =============================================================================
-//	Background image
-// =============================================================================
-
-$('.has-bg').each(function(){
-
-	if ( $(this).find('img').length > 0 ) {
-		var imgSrc = $(this).find('img').attr('src');
-
-		$(this).css('background-image', 'url(' + imgSrc + ')');
-		$(this).find('img').hide();
-	}
-
+	$('#pagepiling').pagepiling({
+		navigation: {
+            'textColor': '#FFFFFF',
+            'bulletsColor': '#FFFFFF',
+            'position': 'right'
+        },
+        anchors: [],
+        css3: true,
+        loopBottom: true,
+    	loopTop: true,
+    	keyboardScrolling: true
+	});
 });
 
-// =============================================================================
-//	Project Toggle
-// =============================================================================
-
-$('.tab').on("click", function(){
-	$(this).parent('.project').toggleClass('open');
-	$(this).parent('.project').siblings().removeClass('open');
-});
-
-// =============================================================================
-//	Photo Showcase
-// =============================================================================
-
-$('.showcase').on("click", function(){
-	$(this).find('img').clone().appendTo('.showcase-screen');
-	$('.showcase-screen').addClass('open');
-});
-
-$('.showcase-screen').on("click", function(){
-	$(this).removeClass('open');
-	$(this).find('img').remove();
-});
-
-
-}); // end document ready
-
-
-// =============================================================================
-//	Document Keyup
-// =============================================================================
-$(document).keyup(function(e) {
-	if (e.keyCode == 27) {
-		$('.showcase-screen').removeClass('open');
-		$('.showcase-screen').find('img').remove();
-	}
+$(document).ready(function() {
+	$('#pp-nav ul li').each(function(){
+		$(this).on('click',function(){
+			$(this).addClass('is-active');
+			$(this).siblings().removeClass('is-active');
+		});
+	});
 });

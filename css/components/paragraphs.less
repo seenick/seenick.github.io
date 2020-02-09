@@ -1,0 +1,31 @@
+////////////// Paragraphs //////////////
+
+//// section ////
+
+.section {
+	background: @black;
+	color: @white;
+	align-items: center;
+	background-size: cover;
+	color: @white;
+	display: flex;
+	height: 100vh;
+	padding: 10px @pad5;
+	&:nth-child(odd) {
+		background: @red;
+	}
+
+	.section-inner {
+		max-width: @wrap-width;
+		margin: 0 auto;
+		padding: @wrap-padding;
+	}
+
+	h2 {
+		font-size: 40px;
+		margin-bottom: 10px;
+		text-align: center;
+		font-weight: 800;
+	}
+
+}

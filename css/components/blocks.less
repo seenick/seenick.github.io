@@ -1,0 +1,68 @@
+////////////// Blocks //////////////
+
+//// General ////
+
+.block {
+
+	.content {
+		margin-top: 0;
+	}
+
+}
+
+
+//// logo -- branding ////
+
+#block-cargill-branding {
+	background: @black;
+	max-width: 150px;
+	padding: 20px;
+
+	img {
+		height: auto;
+		width: 100%;
+	}
+
+}
+
+.page-node-type-page #block-cargill-branding {
+	background: transparent;
+	padding: 0;
+}
+
+
+//// responsive menu mobile icon ////
+
+#block-responsivemenumobileicon {
+	display: inline-block !important;
+
+	span.label {
+		display: none;
+	}
+
+	.responsive-menu-toggle-icon:before, .responsive-menu-toggle-icon:after, .responsive-menu-toggle-icon span.icon {
+		background: @text-color;
+		height: 2px;
+		transition: @transition-delay all;
+		width: 20px;
+	}
+
+	.responsive-menu-toggle-icon {
+		&:hover {
+			&:after,
+			&:before {
+				transform: translateX(5px);
+				width: 10px; 
+			}
+		}
+	}
+
+}
+
+.page-node-type-page #block-responsivemenumobileicon {
+
+	.responsive-menu-toggle-icon:before, .responsive-menu-toggle-icon:after, .responsive-menu-toggle-icon span.icon {
+		background: @white;
+	}
+
+}

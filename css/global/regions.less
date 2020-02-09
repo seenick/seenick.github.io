@@ -1,0 +1,65 @@
+////////////// Regions //////////////
+
+//// tabs ////
+
+.page-node-type-page .tabs {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 9;
+
+	a {
+		color: @white;
+		text-decoration: none;
+		&.is-active,
+		&:hover,
+		&:focus {
+			background: rgba(0,0,0,0.5);
+		}
+	}
+
+}
+
+
+//// mobile menu ////
+
+#off-canvas {
+
+	.mm-navbar {
+		background: @white;
+		border: transparent;
+		color: transparent;
+	}
+
+	.mm-panel, .mm-panels {
+		background: @white;
+		color: @text-color;
+	}
+
+	ul.menu.mm-listview a.is-active {
+		color: @text-color;
+		background: transparent;
+		font-weight: 600;
+	}
+
+	.mm-listitem_selected, .menu-item--active-trail {
+		text-decoration: line-through;
+	}
+
+	.menu-item {
+		border: none;
+		font-family: @font-family-2;
+
+		a {
+			background: transparent;
+			color: @text-color;
+			font-weight: 600;
+		}
+
+	}
+
+}
+
+.mm-wrapper_opening [class*=mm-menu_pagedim].mm-menu_opened~.mm-wrapper__blocker {
+	opacity: 0;
+}
