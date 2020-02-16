@@ -9,7 +9,7 @@ $(document).ready(function() {
             'bulletsColor': '#FFFFFF',
             'position': 'right'
         },
-        anchors: [],
+        anchors: ['welcome','about','skills','work','work2','work3','work4'],
         css3: true,
         loopBottom: true,
     	loopTop: true,
@@ -25,14 +25,3 @@ $(document).ready(function() {
 		});
 	});
 });
-
-
-//// apply background image ////
-
-	// photo gallery
-	$(window).on('load',function(){
-		$('.photo-gallery li').each(function(){
-			var imgSrc = $(this).find('img').attr('src');
-			$(this).css('background-image', 'url(' + imgSrc + ')');
-		});
-	});
