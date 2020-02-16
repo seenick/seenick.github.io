@@ -3,14 +3,28 @@
 //// section ////
 
 .section {
-	background: @black;
-	color: @white;
-	align-items: center;
-	background-size: cover;
+	background: @black url('../img/pattern.png');
+	background-size: 400px;
 	color: @white;
 	display: flex;
-	height: 100vh;
-	padding: 10px @pad5;
+	align-items: center;
+	min-height: 400px;
+	padding: 100px 0;
+	@media @medium {
+		padding: @pad3 0;
+	}
+	&.welcome {
+		height: 100vh;
+	}
+	&:nth-child(odd) {
+		background-color: @white;
+		color: @black;
+
+		h1,h2,h3,h4,h5 {
+			color: @black;
+		}
+
+	}
 
 	.section-inner {
 		max-width: @wrap-width;
@@ -107,6 +121,29 @@
 			padding: 0 5px 20px 5px;
 			text-align: center;
 			width: 33.33333%;
+		}
+
+	}
+
+}
+
+.work {
+
+	.project-gallery {
+		display: flex;
+		width: 100%;
+
+		li {
+			flex: 0 1 33.3333%;
+			height: 400px;
+			margin: 10px;
+			overflow: scroll;
+			width: 33.3333%;
+		}
+
+		img {
+			height: auto;
+			width: 100%;
 		}
 
 	}
