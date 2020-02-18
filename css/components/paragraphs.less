@@ -179,9 +179,18 @@
 				margin: 0 auto;
 				overflow: hidden;
 				width: @slideHeight;
+				&:hover {
+
+					img {
+						filter: grayscale(0);
+					}
+
+				}
 
 				img {
 					height: auto;
+					filter: grayscale(1);
+					transition: @transition-delay all;
 					width: 100%;
 				}
 
