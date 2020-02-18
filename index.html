@@ -9,200 +9,247 @@
     <title>Nick Christensen</title>
     <link rel="icon" type="image/png" href="img/favicon.ico" />
     <link rel="stylesheet" href="css/stylesheet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 </head>
 
 <body>
 
-        <!--Start Header-->
-        <header>
-            <div class="region-header">
-                <div class="logo-area">
-                    <a href="index.html" class="logo">
-                        <img src="img/logo.png" alt="logo">
-                    </a>
-                </div>
-                <div class="menu-trigger">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </div>
+    <!--Start Header-->
+    <header>
+        <div class="region-header">
+            <div class="logo-area">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="logo">
+                </a>
             </div>
-        </header>
-        <!--End Header-->
-
-        <!--Start Welcome Section-->
-        <section class="welcome section" id="welcome" data-anchor="welcome">
-            <div class="section-inner">
-                <h1>Nick Christensen</h1>
-                <a href="">See my work</a>
-                <ul class="social-menu">
-                    <li><a href="mailto:nickchristensen@huskers.unl.edu"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/christensennick"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                    <li><a href="https://codepen.io/NicholasChristensen"><i class="fa fa-codepen" aria-hidden="true"></i> </a></li>
-                    <li><a href="#"><i class="fa fa-file-o" aria-hidden="true"></i><span>RESUME</span></a></li>
-                </ul>
+            <div class="menu-trigger">
+                <i class="fa fa-bars" aria-hidden="true"></i>
             </div>
-        </section>
-        <!--End Welcome Section-->
+        </div>
+    </header>
+    <!--End Header-->
 
-        <!--Start About Section-->
-        <section class="about section" id="about" data-anchor="about">
-            <div class="section-inner">
-                <div class="text-wrap">
-                    <h2>Hello. I am Nick.</h2>
-                    <p><em>Variety is the spice of life.</em> Whether learning new web languages or experiencing new cultures, I am always in search of expanding my horizons, both online and out in the world. I love to solve puzzles and seek out the things I have yet to encounter. I believe that's how we learn and that's how we grow.</p>
-                </div>
-                <div class="photo-gallery">
-                    
-                    <div class="bottom-row">
-                        <div class="image-sm"><img src="img/galata-tower.jpg" alt="Galata Tower, Istanbul"/></div>
-                        <div class="image-sm"><img src="img/neuschwanstein-castle.jpg" alt="Neuschwanstein Castle, Bavaria" /></div>
-                        <div class="image-lg"><img src="img/nick-christensen.jpg" alt="Nick Christensen" /></div>
-                        <div class="image-sm"><img src="img/rome-arch.jpg" alt="Roman Archway" /></div>
-                        <div class="image-sm"><img src="img/chichen-itza.jpg" alt="Chichen Itza, Mexico" /></div>
+    <!--Start Featured Gallery-->
+    <div class="featured-gallery">
+
+        <!-- Slider main container -->
+        <div class="swiper-container">
+
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="image">
+                        <img src="img/work/lied-center.png" alt="Lied Center"/>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!--End About Section-->
 
-        <!--Start Skills Section-->
-        <section class="skills section" id="skills" data-anchor="skills">
-            <div class="section-inner">
-                <h2>Skills</h2>
-                <ul class="skills">
-                    <li class="skill"><div class="skill-image"><i class="fa fa-drupal" aria-hidden="true"></i><span>CMS</span></div><div class="skill-text">Utilizng the latest and greatest CMS, such as Drupal or Wordpress, is key in providing a powerful and easy to use website.</div></li>
-                    <li class="skill"><div class="skill-image"><i class="fa fa-css3" aria-hidden="true"></i><span>Front End</span></div><div class="skill-text">CSS3, Sass, Less, Javascript, and jQuery are some of the tools I use to make beautiful, custom layouts.</div></li>
-                    <li class="skill"><div class="skill-image"><i class="fa fa-code" aria-hidden="true"></i><span>Theming</span></div><div class="skill-text">Writing clean, well-organized HTML, PHP, and Twig in order to build a strong foundation for web.</div></li>
-                    <li class="skill"><div class="skill-image"><i class="fa fa-cogs" aria-hidden="true"></i><span>Processes</span></div><div class="skill-text">Creating frameworks and utilizing new technologies to bring better efficiencies to the team.</div></li>
-                    <li class="skill"><div class="skill-image"><i class="fa fa-eye" aria-hidden="true"></i><span>ADA Compliance</span></div><div class="skill-text">An internet for all! Understanding and implementing ADA compliant code to allow usuability by people from all walks of life.</div></li>
-                    <li class="skill"><div class="skill-image"><i class="fa fa-code-fork" aria-hidden="true"></i><span>Git</span></div><div class="skill-text">Working with multidev environments to collaborate with other team members and providing a logged history of edits and changes to any web project.</div></li>
-                </ul>
-            </div>
-        </section>
-        <!--End Services Section-->
-
-        <!--Start Work Section-->
-        <section class="work section" id="work" data-anchor="work">
-            <div class="section-inner">
-                <h2><span>Featured Work:</span> Lied Center</h2>
-                <ul class="project-details">
-                    <li>Drupal 7</li>
-                    <li>PHP</li>
-                    <li>Less</li>
-                    <li>jQuery</li>
-                    <li>Gulp</li>
-                    <li>Git</li>
-                    <li>ADA compliancy tested</li>
-                    <li><a href="https://www.liedcenter.org/">https://www.liedcenter.org/</a></li>
-                </ul>
-                <div class="project-description">
-                    Lied Center needed a flexible and customizable admin interface to allow for unique page layouts and an ADA compliant site. To accomplish this, we utilized a wide array of paragraph and field collections types, along with custom programmatic layout options including background and text colors, column width and count, and text alignment. Slideshows, animations, and sticky navigations were also included to help make the aesthetics and usability more appealing. Ticket ordering was implemented with a third party that utilized our theme.
+                <div class="swiper-slide">
+                    <div class="image">
+                        <img src="img/work/mpsomaha.png" alt="Millard Public Schools"/>
+                    </div>
                 </div>
-                <ul class="project-gallery">
-                    <li><img src="img/work/lied-center.png"/></li>
-                    <li><img src="img/work/lied-center-waitress.png"/></li>
-                    <li><img src="img/work/lied-center-visit.png"/></li>
-                </ul>
-            </div>
-        </section>
-        <!--End Work Section-->
 
-        <!--Start Work Section-->
-        <section class="work section" id="work2" data-anchor="work2">
-            <div class="section-inner">
-                <h2><span>Featured Work:</span> Millard Public Schools</h2>
-                <ul class="project-details">
-                    <li>Drupal 8</li>
-                    <li>PHP</li>
-                    <li>Twig</li>
-                    <li>Less</li>
-                    <li>jQuery</li>
-                    <li>Gulp</li>
-                    <li>Git</li>
-                    <li>ADA compliancy tested</li>
-                    <li><a href="https://www.mpsomaha.org/">https://www.mpsomaha.org/</a></li>
-                </ul>
-                <div class="project-description">
-                    Millard Public Schools needed a fresh new set of websites for their district site and 35 high school, middle school, and elementary sites. Video banners, resource browsers, and auto-importing staff directories are some of the unique features that were implemented into the sites. Each school site mirrored the district site layout, but came with their own content and color scheme.
+                <div class="swiper-slide">
+                    <div class="image">
+                        <img src="img/work/luxcenter.png" alt="LUX Center"/>
+                    </div>
                 </div>
-                <ul class="project-gallery">
-                    <li><img src="img/work/mpsomaha.png"/></li>
-                    <li><img src="img/work/mpsomaha-internal.png"/></li>
-                    <li><img src="img/work/mpsomaha-departments.png"/></li>
-                </ul>
-            </div>
-        </section>
-        <!--End Work Section-->
 
-        <!--Start Work Section-->
-        <section class="work section" id="work3" data-anchor="work3">
-            <div class="section-inner">
-                <h2><span>Featured Work:</span> LUX Center</h2>
-                <ul class="project-details">
-                    <li>Drupal 7</li>
-                    <li>PHP</li>
-                    <li>Less</li>
-                    <li>jQuery</li>
-                    <li>Git</li>
-                    <li><a href="https://www.luxcenter.org/">https://www.luxcenter.org/</a></li>
-                </ul>
-                <div class="project-description">
-                    This site bolstered a full commerce/shopping cart experience, program registration, donation forms, and exhibition/artwork collections and calendars. All this to go along with a beautiful theme highlighting a large variety of imagery.
+                <div class="swiper-slide">
+                    <div class="image">
+                        <img src="img/work/goodwill.png" alt="Goodwill Industries of Denver"/>
+                    </div>
                 </div>
-                <ul class="project-gallery">
-                    <li><img src="img/work/luxcenter.png"/></li>
-                    <li><img src="img/work/luxcenter-exhibition.png"/></li>
-                    <li><img src="img/work/luxcenter-shop.png"/></li>
-                </ul>
-            </div>
-        </section>
-        <!--End Work Section-->
 
-        <!--Start Work Section-->
-        <section class="work section" id="work4" data-anchor="work4">
-            <div class="section-inner">
-                <h2><span>Featured Work:</span> Goodwill Industries of Denver</h2>
-                <ul class="project-details">
-                    <li>Springboard (CMS)</li>
-                    <li>Twig</li>
-                    <li>Sass</li>
-                    <li>jQuery</li>
-                    <li>Gulp</li>
-                    <li><a href="https://www.goodwilldenver.org">https://www.goodwilldenver.org</a></li>
-                </ul>
-                <div class="project-description">
-                    Goodwill Denver wanted a site that was able to embody their mission and to create a site that allowed visitors to learn about their services, as well as, provide an easy to navigate site that encouraged interaction between the Goodwill and its donors, volunteers, and community. Slideshows, infographics, and colorful imagery and aesthetics are a few tools used to power the theme.
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="swiper-button swiper-button-prev"></div>
+            <div class="swiper-button swiper-button-next"></div>
+
+        </div>
+
+    </div>
+    <!--End Gallery Section-->
+
+    <!--Start Welcome Section-->
+    <div class="welcome section" id="welcome" data-anchor="welcome">
+        <div class="section-inner">
+            <h1>Nick Christensen</h1>
+            <a href="">See my work</a>
+            <ul class="social-menu">
+                <li><a href="mailto:nickchristensen@huskers.unl.edu"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/christensennick"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="https://codepen.io/NicholasChristensen"><i class="fa fa-codepen" aria-hidden="true"></i> </a></li>
+                <li><a href="#"><i class="fa fa-file-o" aria-hidden="true"></i><span>RESUME</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--End Welcome Section-->
+
+    <!--Start About Section-->
+    <div class="about section" id="about" data-anchor="about">
+        <div class="section-inner">
+            <div class="text-wrap">
+                <h2>Hello. I am Nick.</h2>
+                <p><em>Variety is the spice of life.</em> Whether learning new web languages or experiencing new cultures, I am always in search of expanding my horizons, both online and out in the world. I love to solve puzzles and seek out the things I have yet to encounter. I believe that's how we learn and that's how we grow.</p>
+            </div>
+            <div class="photo-gallery">
+
+                <div class="bottom-row">
+                    <div class="image-sm"><img src="img/galata-tower.jpg" alt="Galata Tower, Istanbul"/></div>
+                    <div class="image-sm"><img src="img/neuschwanstein-castle.jpg" alt="Neuschwanstein Castle, Bavaria" /></div>
+                    <div class="image-lg"><img src="img/nick-christensen.jpg" alt="Nick Christensen" /></div>
+                    <div class="image-sm"><img src="img/rome-arch.jpg" alt="Roman Archway" /></div>
+                    <div class="image-sm"><img src="img/chichen-itza.jpg" alt="Chichen Itza, Mexico" /></div>
                 </div>
-                <ul class="project-gallery">
-                    <li><img src="img/work/goodwill.png"/></li>
-                    <li><img src="img/work/goodwill-shop.png"/></li>
-                    <li><img src="img/work/goodwill-impact.png"/></li>
-                </ul>
             </div>
-        </section>
-        <!--End Work Section-->
+        </div>
+    </div>
+    <!--End About Section-->
 
-        <!--Start Work Section-->
-        <section class="work5 section" id="work5" data-anchor="work5">
-            <div class="section-inner">
-                <h2>Other work</h2>
-                <ul class="work-examples">
-                    <li><a href="https://jeo.com/">JEO Consulting Group</a></li>
-                    <li><a href="https://www.sampson-construction.com/">Sampson Construction</a></li>
-                    <li><a href="https://www.khncenterforthearts.org/">KHN Center for the Arts</a></li>
-                    <li><a href="https://www.printerpresence.com/">PrinterPresence</a></li>
-                    <li><a href="https://www.smileinnovationsdentistry.com/">Smile Innovations Dentristy</a></li>
-                    <li><a href="https://www.fortifygroup.net/">Fortify Group</a></li>
-                    <li><a href="https://www.kregelwindmillfactorymuseum.org/">Kregel Windmill Factory Museum</a></li>
-                    <li><a href="https://www.nebmed.org/">Nebraska Medical Association</a></li>
-                    <li><a href="https://www.reams.net/">REAMS</a></li>
-                </ul>
+    <!--Start Skills Section-->
+    <div class="skills section" id="skills" data-anchor="skills">
+        <div class="section-inner">
+            <h2>Skills</h2>
+            <ul class="skills">
+                <li class="skill"><div class="skill-image"><i class="fa fa-drupal" aria-hidden="true"></i><span>CMS</span></div><div class="skill-text">Utilizng the latest and greatest CMS, such as Drupal or Wordpress, is key in providing a powerful and easy to use website.</div></li>
+                <li class="skill"><div class="skill-image"><i class="fa fa-css3" aria-hidden="true"></i><span>Front End</span></div><div class="skill-text">CSS3, Sass, Less, Javascript, and jQuery are some of the tools I use to make beautiful, custom layouts.</div></li>
+                <li class="skill"><div class="skill-image"><i class="fa fa-code" aria-hidden="true"></i><span>Theming</span></div><div class="skill-text">Writing clean, well-organized HTML, PHP, and Twig in order to build a strong foundation for web.</div></li>
+                <li class="skill"><div class="skill-image"><i class="fa fa-cogs" aria-hidden="true"></i><span>Processes</span></div><div class="skill-text">Creating frameworks and utilizing new technologies to bring better efficiencies to the team.</div></li>
+                <li class="skill"><div class="skill-image"><i class="fa fa-eye" aria-hidden="true"></i><span>ADA Compliance</span></div><div class="skill-text">An internet for all! Understanding and implementing ADA compliant code to allow usuability by people from all walks of life.</div></li>
+                <li class="skill"><div class="skill-image"><i class="fa fa-code-fork" aria-hidden="true"></i><span>Git</span></div><div class="skill-text">Working with multidev environments to collaborate with other team members and providing a logged history of edits and changes to any web project.</div></li>
+            </ul>
+        </div>
+    </div>
+    <!--End Services Section-->
+
+    <!--Start Work Section-->
+    <div class="work section" id="work" data-anchor="work">
+        <div class="section-inner">
+            <h2><span>Featured Work:</span> Lied Center</h2>
+            <ul class="project-details">
+                <li>Drupal 7</li>
+                <li>PHP</li>
+                <li>Less</li>
+                <li>jQuery</li>
+                <li>Gulp</li>
+                <li>Git</li>
+                <li>ADA compliancy tested</li>
+                <li><a href="https://www.liedcenter.org/">https://www.liedcenter.org/</a></li>
+            </ul>
+            <div class="project-description">
+                Lied Center needed a flexible and customizable admin interface to allow for unique page layouts and an ADA compliant site. To accomplish this, we utilized a wide array of paragraph and field collections types, along with custom programmatic layout options including background and text colors, column width and count, and text alignment. Slideshows, animations, and sticky navigations were also included to help make the aesthetics and usability more appealing. Ticket ordering was implemented with a third party that utilized our theme.
             </div>
-        </section>
-        <!--End Work Section-->
+            <ul class="project-gallery">
+                <li><img src="img/work/lied-center.png"/></li>
+                <li><img src="img/work/lied-center-waitress.png"/></li>
+                <li><img src="img/work/lied-center-visit.png"/></li>
+            </ul>
+        </div>
+    </div>
+    <!--End Work Section-->
+
+    <!--Start Work Section-->
+    <div class="work section" id="work2" data-anchor="work2">
+        <div class="section-inner">
+            <h2><span>Featured Work:</span> Millard Public Schools</h2>
+            <ul class="project-details">
+                <li>Drupal 8</li>
+                <li>PHP</li>
+                <li>Twig</li>
+                <li>Less</li>
+                <li>jQuery</li>
+                <li>Gulp</li>
+                <li>Git</li>
+                <li>ADA compliancy tested</li>
+                <li><a href="https://www.mpsomaha.org/">https://www.mpsomaha.org/</a></li>
+            </ul>
+            <div class="project-description">
+                Millard Public Schools needed a fresh new set of websites for their district site and 35 high school, middle school, and elementary sites. Video banners, resource browsers, and auto-importing staff directories are some of the unique features that were implemented into the sites. Each school site mirrored the district site layout, but came with their own content and color scheme.
+            </div>
+            <ul class="project-gallery">
+                <li><img src="img/work/mpsomaha.png"/></li>
+                <li><img src="img/work/mpsomaha-internal.png"/></li>
+                <li><img src="img/work/mpsomaha-departments.png"/></li>
+            </ul>
+        </div>
+    </div>
+    <!--End Work Section-->
+
+    <!--Start Work Section-->
+    <div class="work section" id="work3" data-anchor="work3">
+        <div class="section-inner">
+            <h2><span>Featured Work:</span> LUX Center</h2>
+            <ul class="project-details">
+                <li>Drupal 7</li>
+                <li>PHP</li>
+                <li>Less</li>
+                <li>jQuery</li>
+                <li>Git</li>
+                <li><a href="https://www.luxcenter.org/">https://www.luxcenter.org/</a></li>
+            </ul>
+            <div class="project-description">
+                This site bolstered a full commerce/shopping cart experience, program registration, donation forms, and exhibition/artwork collections and calendars. All this to go along with a beautiful theme highlighting a large variety of imagery.
+            </div>
+            <ul class="project-gallery">
+                <li><img src="img/work/luxcenter.png"/></li>
+                <li><img src="img/work/luxcenter-exhibition.png"/></li>
+                <li><img src="img/work/luxcenter-shop.png"/></li>
+            </ul>
+        </div>
+    </div>
+    <!--End Work Section-->
+
+    <!--Start Work Section-->
+    <div class="work section" id="work4" data-anchor="work4">
+        <div class="section-inner">
+            <h2><span>Featured Work:</span> Goodwill Industries of Denver</h2>
+            <ul class="project-details">
+                <li>Springboard (CMS)</li>
+                <li>Twig</li>
+                <li>Sass</li>
+                <li>jQuery</li>
+                <li>Gulp</li>
+                <li><a href="https://www.goodwilldenver.org">https://www.goodwilldenver.org</a></li>
+            </ul>
+            <div class="project-description">
+                Goodwill Denver wanted a site that was able to embody their mission and to create a site that allowed visitors to learn about their services, as well as, provide an easy to navigate site that encouraged interaction between the Goodwill and its donors, volunteers, and community. Slideshows, infographics, and colorful imagery and aesthetics are a few tools used to power the theme.
+            </div>
+            <ul class="project-gallery">
+                <li><img src="img/work/goodwill.png"/></li>
+                <li><img src="img/work/goodwill-shop.png"/></li>
+                <li><img src="img/work/goodwill-impact.png"/></li>
+            </ul>
+        </div>
+    </div>
+    <!--End Work Section-->
+
+    <!--Start Work Section-->
+    <div class="work5 section" id="work5" data-anchor="work5">
+        <div class="section-inner">
+            <h2>Other work</h2>
+            <ul class="work-examples">
+                <li><a href="https://jeo.com/">JEO Consulting Group</a></li>
+                <li><a href="https://www.sampson-construction.com/">Sampson Construction</a></li>
+                <li><a href="https://www.khncenterforthearts.org/">KHN Center for the Arts</a></li>
+                <li><a href="https://www.printerpresence.com/">PrinterPresence</a></li>
+                <li><a href="https://www.smileinnovationsdentistry.com/">Smile Innovations Dentristy</a></li>
+                <li><a href="https://www.fortifygroup.net/">Fortify Group</a></li>
+                <li><a href="https://www.kregelwindmillfactorymuseum.org/">Kregel Windmill Factory Museum</a></li>
+                <li><a href="https://www.nebmed.org/">Nebraska Medical Association</a></li>
+                <li><a href="https://www.reams.net/">REAMS</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--End Work Section-->
 
     <!--javascript-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/2ec9d18153.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="js/site.min.js"></script>
 
 </body>

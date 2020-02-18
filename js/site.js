@@ -1,18 +1,16 @@
-// /*
-// ** pagePiling
-// */
+/*
+** initialize swiperjs
+*/
 
-// $(document).ready(function() {
-// 	$('#pagepiling').pagepiling({
-// 		navigation: {
-//             'textColor': '#FFFFFF',
-//             'bulletsColor': '#FFFFFF',
-//             'position': 'right'
-//         },
-//         anchors: ['welcome','about','skills','work','work2','work3','work4'],
-//         css3: true,
-//         loopBottom: true,
-//     	loopTop: true,
-//     	keyboardScrolling: true
-// 	});
-// });
+$(document).ready(function () {
+  //initialize swiper when document ready
+  var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    loop: true,
+    navigation: {
+    	nextEl: '.swiper-button-next',
+    	prevEl: '.swiper-button-prev',
+  	},
+  	slidesPerView: 5,
+  });
+});
