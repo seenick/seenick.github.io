@@ -38,14 +38,16 @@ header {
 .offcanvas-menu {
 	background: @ltgray;
 	color: @black;
+	height: 100%;
 	padding: 40px;
 	position: fixed;
 	top: 0;
 	right: 0;
-	max-width: 500px; 
+	max-width: 350px; 
 	transform: translateX(100%);
 	transition: @transition-delay all;
 	width: 90%;
+	z-index: 99;
 	@media @medium {
 		padding: 20px;
 	}
@@ -56,15 +58,24 @@ header {
 	.main-menu {
 
 		.close-trigger {
-
+			cursor: pointer;
+			font-size: 30px;
+			text-align: center;
 		}
 
 		ul {
+			list-style: none;
+			padding: 0;
+			margin: 20px 0 0 0;
 
 			li {
+				margin-top: 15px;
 
 				a {
 					color: @black;
+					display: block;
+					font-family: @font-family-2;
+					font-size: 30px;
 				}
 
 			}
