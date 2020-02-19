@@ -13,9 +13,6 @@
 	@media @medium {
 		padding: @pad3 0;
 	}
-	&.welcome {
-		height: 100vh;
-	}
 	&:nth-child(odd) {
 		background-color: @white;
 		color: @black;
@@ -71,42 +68,6 @@
 
 	}
 
-	div.photo-gallery {
-
-		.bottom-row {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			.image-lg {
-				border-radius: 100%;
-				overflow: hidden;
-				margin: 10px;
-				width: 250px;
-				height: 250px;
-			}
-
-			.image-sm {
-				border-radius: 100%;
-				overflow: hidden;
-				margin: 10px;
-				width: 175px;
-				height: 175px;
-				&:first-child, &:last-child {
-					width: 130px;
-					height: 130px;
-				}
-			}
-
-		}
-
-		img {
-			height: auto;
-			width: 100%;
-		}
-
-	}
-
 	ul.skills {
 		display: flex;
 		flex-wrap: wrap;
@@ -127,23 +88,78 @@
 
 }
 
+.about {
+
+	.image {
+		border-radius: 100%;
+		height: 200px;
+		overflow: hidden;
+		margin: 15px auto;
+		width: 200px;
+
+		img {
+			height: auto;
+			width: 100%;
+		}
+
+	}
+
+}
+
 .work {
 
-	.project-gallery {
+	ul.work-examples {
 		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 0;
+		margin: 40px auto;
+		max-width: 990px; 
 		width: 100%;
 
 		li {
-			flex: 0 1 33.3333%;
-			height: 400px;
-			margin: 10px;
-			overflow: scroll;
-			width: 33.3333%;
+			flex: 0 1 300px;
+			list-style: none;
+			margin: 15px;
+			width: 300px;
+			@media @small {
+				flex: 0 1 50%;
+				width: 50%;
+			}
+		}
+
+		.image {
+			height: 300px;
+			width: 300px;
+			margin: 0 auto;
+			overflow: hidden;
+			@media @small {
+				width: 100%;
+			}
+			&:hover {
+
+					img {
+						filter: grayscale(0);
+					}
+
+				}
+		}
+
+		span {
+			font-family: @font-family-2;
+			font-size: 16px;
+			display: block;
+			padding: 10px 0;
+			text-transform: uppercase;
+			text-align: center;
+			font-weight: 600;
 		}
 
 		img {
 			height: auto;
 			width: 100%;
+			filter: grayscale(1);
+			transition: @transition-delay all;
 		}
 
 	}
