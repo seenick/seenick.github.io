@@ -30,3 +30,25 @@ header {
 	color: @black;
 	font-size: 30px;
 }
+
+
+//// offcanvas menu ////
+
+.offcanvas-menu {
+	background: @ltgray;
+	color: @black;
+	padding: 40px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	max-width: 500px; 
+	transform: translateX(100%);
+	transition: @transition-delay all;
+	width: 90%;
+	@media @medium {
+		padding: 20px;
+	}
+	&.is-visible {
+		transform: translateX(0);
+	}
+}
