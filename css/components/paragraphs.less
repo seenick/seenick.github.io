@@ -252,6 +252,27 @@
 .featured-gallery {
 	background: @black;
 	padding: 50px 0;
+	transform: rotate(-10deg);
+	position: relative;
+	max-width: 100%;
+	&:before {
+		content: '';
+		background: @black;
+		width: 1000px;
+		height: 100%;
+		position: absolute;
+		left: -999px;
+		top: 0;
+	}
+	&:after {
+		content: '';
+		background: @black;
+		width: 1000px;
+		height: 100%;
+		position: absolute;
+		right: -999px;
+		top: 0;
+	}
 }
 
 //// swiper slideshow ////
@@ -304,6 +325,10 @@
 		color: @black;
 		height: 50px;
 		width: 50px;
+		display: none;
+		@media @medium {
+			display: block;
+		}
 		&:after {
 			font-size: 20px;
 		}

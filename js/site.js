@@ -6,6 +6,9 @@ $(document).ready(function () {
   //initialize swiper when document ready
   var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
+    autoplay: {
+    	delay: 5000,
+  	},
     loop: true,
     navigation: {
     	nextEl: '.swiper-button-next',
