@@ -14,7 +14,7 @@
 		padding: @pad3 0;
 	}
 	&:nth-child(even) {
-		background-color: @white;
+		background: @white;
 		color: @black;
 
 		h1,h2,h3,h4,h5 {
@@ -250,7 +250,9 @@
 //// featured gallery ////
 
 .featured-gallery {
-	background: @black;
+	background: @black url('../img/pattern.png');
+	background-size: 400px;
+	margin-top: 100px;
 	padding: 50px 0;
 	transform: rotate(-10deg);
 	position: relative;
