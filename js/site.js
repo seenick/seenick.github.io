@@ -4,114 +4,33 @@
 
 $(document).ready(function () {
 
-	if ($(window).width() > 1050) {
-
-		//initialize swiper when document ready
-		var mySwiper = new Swiper ('.swiper-container', {
+	//initialize swiper when document ready
+	var mySwiper = new Swiper ('.swiper-container', {
 		// Optional parameters
 		autoplay: {
 			delay: 5000,
-			},
+		},
 		loop: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
-			},
-			slidesPerView: 5,
-			loopedSlides: 6
-		});
-
-	} else if ($(window).width() > 830) {
-
-		//initialize swiper when document ready
-		var mySwiper = new Swiper ('.swiper-container', {
-		// Optional parameters
-		autoplay: {
-			delay: 5000,
-			},
-		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-			},
-			slidesPerView: 4,
-			loopedSlides: 6
-		});
-
-	} else if ($(window).width() > 640) {
-
-		//initialize swiper when document ready
-		var mySwiper = new Swiper ('.swiper-container', {
-		// Optional parameters
-		autoplay: {
-			delay: 5000,
-			},
-		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-			},
-			slidesPerView: 3,
-			loopedSlides: 6
-		});
-
-	} else {}
-
-	$(window).on("resize", function(event){
-  
-		if ($(window).width() > 1050) {
-
-			//initialize swiper when document ready
-			var mySwiper = new Swiper ('.swiper-container', {
-			// Optional parameters
-			autoplay: {
-				delay: 5000,
-				},
-			loop: true,
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-				},
-				slidesPerView: 5,
-				loopedSlides: 6
-			});
-
-		} else if ($(window).width() > 830) {
-
-			//initialize swiper when document ready
-			var mySwiper = new Swiper ('.swiper-container', {
-			// Optional parameters
-			autoplay: {
-				delay: 5000,
-				},
-			loop: true,
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-				},
-				slidesPerView: 4,
-				loopedSlides: 6
-			});
-
-		} else if ($(window).width() > 640) {
-
-			//initialize swiper when document ready
-			var mySwiper = new Swiper ('.swiper-container', {
-			// Optional parameters
-			autoplay: {
-				delay: 5000,
-				},
-			loop: true,
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-				},
-				slidesPerView: 3,
-				loopedSlides: 6
-			});
-
-		}
-  
+		},
+		slidesPerView: 5,
+		loopedSlides: 6,
+		breakpoints: {
+	        640: {
+	          slidesPerView: 3,
+	          spaceBetween: 20,
+	        },
+	        830: {
+	          slidesPerView: 4,
+	          spaceBetween: 40,
+	        },
+	        1050: {
+	          slidesPerView: 5,
+	          spaceBetween: 50,
+	        },
+	    }
 	});
 
 });
