@@ -23,15 +23,20 @@
 			text-transform: uppercase;
 			padding: 10px 20px;
 			margin: 10px;
+			width: 150px;
 			line-height: 1.2;
 			text-align: center;
 			background: @black;
 			color: @white;
+			@media @small {
+				width: 90px;
+			}
 		}
 
 	}
 
 	div.website-link {
+		margin: 20px 0;
 		text-align: center;
 
 		a {
@@ -64,7 +69,7 @@
 		display: flex;
 		justify-content: center;
 		list-style: none;
-		margin: 0 -10px;
+		margin: 40px -10px 0 -10px;
 		padding: 0;
 
 		li {
