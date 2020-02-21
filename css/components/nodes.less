@@ -1,7 +1,54 @@
 ////////////// Nodes //////////////
 
-//// landing page (basic page) ////
+//// work ////
 
-.page-node-type-page .mm-page {
-	height: 100vh;
+.page-work {
+
+	ul.project-details {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			font-family: @font-family-2;
+			font-size: 14px;
+			font-weight: 600;
+			text-transform: uppercase;
+			padding: 10px 20px;
+			margin: 10px;
+			line-height: 1.2;
+			text-align: center;
+			background: @black;
+			color: @white;
+		}
+
+	}
+
+	div.website-link {
+
+		a {
+			display: inline-block;
+			width: auto;
+			background: transparent;
+			border: 2px solid @white;
+			color: @white;
+			font-size: 18px;
+			font-weight: 600;
+			text-align: center;
+			font-family: @font-family-2;
+			text-transform: uppercase;
+			text-decoration: none;
+			padding: 10px 40px;
+			line-height: 1.2;
+			&:hover {
+				background: @white;
+				color: @black;
+			}
+		}
+
+	}
+
 }
