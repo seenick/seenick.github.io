@@ -6,8 +6,6 @@
 	background: @black url('../img/pattern.png');
 	background-size: 400px;
 	color: @white;
-	display: flex;
-	align-items: center;
 	min-height: 400px;
 	padding: 100px 0;
 	@media @medium {
@@ -56,21 +54,23 @@
 
 	ul.social-menu {
 		display: flex;
-		list-style: none;
 		justify-content: center;
+		align-items: center;
 		padding: 0;
-		margin: 0;
+		margin: 10px 0 0 0;
+		list-style: none;
 
 		li {
-			list-style: none;
-			padding: 10px;
+			margin: 0 10px;
+			&:hover {
+				a {
+					color: @link-color;
+				}
+			}
 
 			a {
-				color: @white;
 				font-size: 40px;
-				&:hover {
-					color: @blue;
-				}
+				color: @black;
 			}
 
 		}
@@ -83,13 +83,12 @@
 		justify-content: center;
 		list-style: none;
 		padding: 0;
-		margin: 40px 0;
+		margin: 20px 0;
 
 		li {
-			
 			flex: 0 1 33.33333%;
 			font-size: 20px;
-			padding: 10px 5px;
+			padding: 20px;
 			text-align: center;
 			width: 33.33333%;
 			@media @large {
@@ -116,14 +115,16 @@
 				top: 20px;
 
 				i {
-					font-size: 40px;
+					font-size: 50px;
+					line-height: 0.9;
 				}
 
 				span {
 					font-size: 14px;
 					font-family: @font-family-2;
 					font-weight: @bold;
-					padding: 10px;
+					line-height: 1.2;
+					padding: 10px 15px 0 15px;
 					text-transform: uppercase;
 				}
 
@@ -131,7 +132,7 @@
 
 			.skill-text {
 				background: rgba(255,255,255,0.1);
-				height: 160px;
+				height: 180px;
 				justify-content: center;
 				font-size: 16px;
 				padding: 40px 20px 20px 20px;
@@ -144,9 +145,45 @@
 
 	}
 
+	.resume-link {
+		padding: 10px;
+		text-align: center;
+		
+		a {
+			display: inline-block;
+			width: auto;
+			background: transparent;
+			border: 2px solid @black;
+			color: @black;
+			font-size: 18px;
+			font-weight: 600;
+			text-align: center;
+			font-family: @font-family-2;
+			text-transform: uppercase;
+			text-decoration: none;
+			padding: 10px 40px;
+			line-height: 1.2;
+			&:hover {
+				background: @black;
+				color: @white;
+			}
+		}
+
+	}
+
 }
 
+//// about ////
+
 .about {
+	@media @small {
+		padding-top: 60px;
+	}
+
+	.text-wrap {
+		max-width: 800px;
+		margin: 0 auto;
+	}
 
 	.image {
 		border-radius: 100%;
@@ -164,6 +201,8 @@
 
 }
 
+//// work ////
+
 .work {
 
 	ul.work-examples {
@@ -174,15 +213,19 @@
 		margin: 40px auto;
 		max-width: 990px; 
 		width: 100%;
+		@media @small {
+			margin: 20px auto;
+		}
 
 		li {
 			flex: 0 1 300px;
 			list-style: none;
 			margin: 15px;
 			width: 300px;
-			@media @small {
-				flex: 0 1 50%;
-				width: 50%;
+			@media @medium {
+				flex: 0 1 48%;
+				margin: 15px 1%;
+				width: 48%;
 			}
 		}
 
@@ -192,16 +235,17 @@
 			margin: 0 auto;
 			overflow: hidden;
 			@media @small {
+				height: 200px;
 				width: 100%;
 			}
 			&:hover {
 
-					img {
-						transform: translateY(-50%);
-						filter: grayscale(0);
-					}
-
+				img {
+					transform: translateY(-50%);
+					filter: grayscale(0);
 				}
+
+			}
 		}
 
 		span {
@@ -255,11 +299,14 @@
 .featured-gallery {
 	background: @black url('../img/pattern.png');
 	background-size: 400px;
-	margin-top: 100px;
+	margin-top: 50px;
 	padding: 50px 0;
-	transform: rotate(-10deg);
+	transform: rotate(-6deg);
 	position: relative;
 	max-width: 100%;
+	@media @small {
+		margin-top: 20px;
+	}
 	&:before {
 		content: '';
 		background: @black;
@@ -291,6 +338,9 @@
 	margin: 0 auto;
 	padding: @wrap-padding;
 	overflow: visible !important;
+	@media @small {
+		display: none;
+	}
 
 	.swiper-wrapper {
 

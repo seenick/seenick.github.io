@@ -3,20 +3,117 @@
 */
 
 $(document).ready(function () {
-  //initialize swiper when document ready
-  var mySwiper = new Swiper ('.swiper-container', {
-    // Optional parameters
-    autoplay: {
-    	delay: 5000,
-  	},
-    loop: true,
-    navigation: {
-    	nextEl: '.swiper-button-next',
-    	prevEl: '.swiper-button-prev',
-  	},
-  	slidesPerView: 5,
-  	loopedSlides: 6
-  });
+
+	if ($(window).width() > 1050) {
+
+		//initialize swiper when document ready
+		var mySwiper = new Swiper ('.swiper-container', {
+		// Optional parameters
+		autoplay: {
+			delay: 5000,
+			},
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+			},
+			slidesPerView: 5,
+			loopedSlides: 6
+		});
+
+	} else if ($(window).width() > 830) {
+
+		//initialize swiper when document ready
+		var mySwiper = new Swiper ('.swiper-container', {
+		// Optional parameters
+		autoplay: {
+			delay: 5000,
+			},
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+			},
+			slidesPerView: 4,
+			loopedSlides: 6
+		});
+
+	} else if ($(window).width() > 640) {
+
+		//initialize swiper when document ready
+		var mySwiper = new Swiper ('.swiper-container', {
+		// Optional parameters
+		autoplay: {
+			delay: 5000,
+			},
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+			},
+			slidesPerView: 3,
+			loopedSlides: 6
+		});
+
+	} else {}
+
+	$(window).on("resize", function(event){
+  
+		if ($(window).width() > 1050) {
+
+			//initialize swiper when document ready
+			var mySwiper = new Swiper ('.swiper-container', {
+			// Optional parameters
+			autoplay: {
+				delay: 5000,
+				},
+			loop: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+				},
+				slidesPerView: 5,
+				loopedSlides: 6
+			});
+
+		} else if ($(window).width() > 830) {
+
+			//initialize swiper when document ready
+			var mySwiper = new Swiper ('.swiper-container', {
+			// Optional parameters
+			autoplay: {
+				delay: 5000,
+				},
+			loop: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+				},
+				slidesPerView: 4,
+				loopedSlides: 6
+			});
+
+		} else if ($(window).width() > 640) {
+
+			//initialize swiper when document ready
+			var mySwiper = new Swiper ('.swiper-container', {
+			// Optional parameters
+			autoplay: {
+				delay: 5000,
+				},
+			loop: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+				},
+				slidesPerView: 3,
+				loopedSlides: 6
+			});
+
+		}
+  
+	});
+
 });
 
 
