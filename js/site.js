@@ -6,7 +6,6 @@ $(document).ready(function () {
 
 	//initialize swiper when document ready
 	var mySwiper = new Swiper ('.swiper-container', {
-		// Optional parameters
 		autoplay: {
 			delay: 5000,
 		},
@@ -19,16 +18,13 @@ $(document).ready(function () {
 		loopedSlides: 6,
 		breakpoints: {
 	        640: {
-	          slidesPerView: 3,
-	          spaceBetween: 20,
+	          slidesPerView: 3
 	        },
 	        830: {
-	          slidesPerView: 4,
-	          spaceBetween: 40,
+	          slidesPerView: 4
 	        },
 	        1050: {
-	          slidesPerView: 5,
-	          spaceBetween: 50,
+	          slidesPerView: 5
 	        },
 	    }
 	});
