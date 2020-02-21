@@ -3,7 +3,6 @@
 header {
 	background: @white;
 	position: relative;
-	z-index: 2;
 
 	.region-header {
 		align-items: center;
@@ -20,6 +19,9 @@ header {
 .front {
 
 	header {
+		@media @small {
+			z-index: 2;
+		}
 		&:after {
 			content: '';
 			background: white;
