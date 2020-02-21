@@ -1,6 +1,9 @@
 ////////////// Header //////////////
 
 header {
+	background: @white;
+	position: relative;
+	z-index: 2;
 
 	.region-header {
 		align-items: center;
@@ -10,6 +13,24 @@ header {
 		max-width: @wrap-width;
 		margin: 0 auto;
 		padding: @pad5;
+	}
+
+}
+
+.front {
+
+	header {
+		&:after {
+			content: '';
+			background: white;
+			position: absolute;
+			border: 0;
+			height: 200px;
+			width: 100%;
+			@media @small {
+				display: none;
+			}
+		}
 	}
 
 }
@@ -33,6 +54,9 @@ header {
 		font-size: 30px;
 		line-height: 0;
 		margin: 0 0 0 20px;
+		@media @small {
+			font-size: 24px;
+		}
 	}
 
 }
@@ -55,7 +79,7 @@ header {
 	position: fixed;
 	top: 0;
 	right: 0;
-	max-width: 350px; 
+	max-width: 300px; 
 	transform: translateX(100%);
 	transition: @transition-delay all;
 	width: 90%;

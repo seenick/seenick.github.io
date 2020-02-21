@@ -3,19 +3,17 @@
 //// section ////
 
 .section {
-	background: @black url('../img/pattern.png');
-	background-size: 400px;
 	color: @white;
 	min-height: 400px;
 	padding: 100px 0;
 	@media @medium {
 		padding: @pad3 0;
 	}
-	&:nth-child(even) {
+	&:nth-child(odd) {
 		background: @white;
 		color: @black;
 
-		h1,h2,h3,h4,h5 {
+		h1,h2,h3,h4,h5, a {
 			color: @black;
 		}
 
@@ -48,6 +46,10 @@
 		margin-bottom: 30px;
 	}
 
+	a {
+		color: @white;
+	}
+
 	p {
 		text-align: center;
 	}
@@ -61,7 +63,7 @@
 		list-style: none;
 
 		li {
-			margin: 0 10px;
+			margin: 0 15px;
 			&:hover {
 				a {
 					color: @link-color;
@@ -69,8 +71,7 @@
 			}
 
 			a {
-				font-size: 40px;
-				color: @black;
+				font-size: 32px;
 			}
 
 		}
@@ -101,8 +102,8 @@
 			}
 
 			.skill-image {
-				background: @white;
-				color: @black;
+				background: @black;
+				color: @white;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -131,14 +132,9 @@
 			}
 
 			.skill-text {
-				background: rgba(255,255,255,0.1);
-				height: 180px;
 				justify-content: center;
 				font-size: 16px;
-				padding: 40px 20px 20px 20px;
-				@media @small {
-					height: auto;
-				}
+				padding: 40px 0 0 0;
 			}
 
 		}
@@ -153,8 +149,8 @@
 			display: inline-block;
 			width: auto;
 			background: transparent;
-			border: 2px solid @black;
-			color: @black;
+			border: 2px solid @white;
+			color: @white;
 			font-size: 18px;
 			font-weight: 600;
 			text-align: center;
@@ -164,8 +160,8 @@
 			padding: 10px 40px;
 			line-height: 1.2;
 			&:hover {
-				background: @black;
-				color: @white;
+				background: @white;
+				color: @black;
 			}
 		}
 
@@ -281,8 +277,9 @@
 			padding: 10px;
 
 			a {
-				color: @black;
+				color: inherit;
 				&:hover {
+					color: @link-color;
 					text-decoration: underline;
 				}
 			}
@@ -297,7 +294,7 @@
 //// featured gallery ////
 
 .featured-gallery {
-	background: @black url('../img/pattern.png');
+	background: @white;
 	background-size: 400px;
 	margin-top: 50px;
 	padding: 50px 0;
@@ -305,11 +302,14 @@
 	position: relative;
 	max-width: 100%;
 	@media @small {
-		margin-top: 20px;
+		margin: 0 0 -30px 0;
+		top: -50px;
+		z-index: 1;
+		padding: 100px 0 0 0;
 	}
 	&:before {
 		content: '';
-		background: @black;
+		background: @white;
 		width: 1000px;
 		height: 100%;
 		position: absolute;
@@ -318,7 +318,7 @@
 	}
 	&:after {
 		content: '';
-		background: @black;
+		background: @white;
 		width: 1000px;
 		height: 100%;
 		position: absolute;
@@ -347,11 +347,14 @@
 		.swiper-slide {
 
 			.image {
+				box-shadow: 0 0 15px 0px #555;
 				height: @slideHeight;
 				margin: 0 auto;
 				overflow: hidden;
 				width: @slideHeight;
+				transition: @transition-delay all;
 				&:hover {
+					box-shadow: 0 0 15px 0px #000;
 
 					img {
 						filter: grayscale(0);
